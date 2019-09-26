@@ -1,3 +1,4 @@
 src/.env
 src/package-lock.json
 src/node_modules
+src/config.json

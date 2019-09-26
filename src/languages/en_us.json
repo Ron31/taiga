@@ -1,0 +1,17 @@
+{
+    "general.error": "An error occured: $error",
+    "general.footer": "Command requested by $user",
+
+    "command.language.title": "Language",
+    "command.language.name": ":flag_us: American English",
+    "command.language.error": "You haven't provided a valid language ID. Available languages are $langs.",
+    "command.language.success": "Language sucessfully changed to $lang",
+    "command.language.description": "Change the bot's language on this server",
+    "command.language.usage": " [Language]",
+
+    "command.neko.title": "Neko",
+    "command.neko.footer": "Powered by nekos.life",
+    "command.neko.nsfw": "While all pictures should be SFW, we cannot guarantee that there won't be some NSFW pictures, so please use this command in a nsfw channel.",
+    "command.neko.description": "Get a random SFW image of a neko",
+    "command.neko.usage": ""
+}
