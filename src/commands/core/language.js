@@ -6,7 +6,9 @@ module.exports.run = async (cmd, client, args, message) => {
         displayLanguage();
     } else if(args.length == 1) {
         if(langs.includes(args[0])) {
-            updateLanguage(args[0]);
+            if(cmd.member.hasPermission("ADMINISTRATOR")) {
+                updateLanguage(args[0]);
+            }
         } else {
             displayError();
         }
