@@ -17,12 +17,12 @@ for(let dir of cmdDir) {
     client.log.info("Loading command category " + dir + "...", "I_COMMANDHANDLER");
     let group = fs.readdirSync(`./commands/${dir}`);
     for (let commandFile of group) {
-      client.log.info("Loading command " + dir + "/" + commandFile.split(".")[0] + ".", "I_COMMANDHANDLER");
-      if (!commandFile.endsWith(".js")) {
-        return;
-      }
-      let command = require(`./commands/${dir}/${commandFile}`);
-      client.commands.set(commandFile.split(".")[0], command);
+		client.log.info("Loading command " + dir + "/" + commandFile.split(".")[0] + "...", "I_COMMANDHANDLER");
+		if (!commandFile.endsWith(".js")) {
+			return;
+		}
+		let command = require(`./commands/${dir}/${commandFile}`);
+		client.commands.set(commandFile.split(".")[0], command);
     }
 }
 fs.readdir("./events", (err, files) => {

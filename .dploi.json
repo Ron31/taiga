@@ -1,0 +1,6 @@
+{
+    "action": {
+        "type": "pm2",
+        "variables": ["/home/taigabot/", "taigabot"]
+    }
+}

@@ -2,6 +2,13 @@
     "general.error": "An error occured: $error",
     "general.footer": "Command requested by $user",
 
+    "command.help.title": "Help",
+    "command.help.temporaryDescription": "We are still working on this command and we'll sort it more. For now, you have to use this.",
+    "command.help.error1": "This category doesn't exist. Please use `$prefixhelp` to view all categories.",
+    "command.help.error2": "You have entered too many Arguments. Please either just run `$prefixhelp` or specifiy a category after it.",
+    "command.help.description": "Shows all commands",
+    "command.help.usage": " [Category]",
+
     "command.language.title": "Language",
     "command.language.name": ":flag_us: American English",
     "command.language.error": "You haven't provided a valid language ID. Available languages are $langs.",
@@ -10,8 +17,22 @@
     "command.language.usage": " [Language]",
 
     "command.neko.title": "Neko",
-    "command.neko.footer": "Powered by nekos.life",
-    "command.neko.nsfw": "While all pictures should be SFW, we cannot guarantee that there won't be some NSFW pictures, so please use this command in a nsfw channel.",
+    "command.neko.footer": "⚡ by nekos.life",
     "command.neko.description": "Get a random SFW image of a neko",
-    "command.neko.usage": ""
+    "command.neko.usage": "",
+
+    "command.fox.title": "Fox",
+    "command.fox.footer": "⚡ by randomfox.ca",
+    "command.fox.description": "Get a random image of a fox",
+    "command.fox.usage": "",
+
+    "command.taiga.title": "Taiga",
+    "command.taiga.footer": "⚡ by toradorapi.crugg.de",
+    "command.taiga.description": "Get a random image of Taiga from Toradora!",
+    "command.taiga.usage": "",
+
+    "command.about.title": "About",
+    "command.about.text": "Hey there! This bot was developed by CRUGG. If you are a programmer, you can find some other projects of mine on [GitHub](https://github.com/OfficialCRUGG)",
+    "command.about.description": "Information about the bot",
+    "command.about.usage": ""
 }

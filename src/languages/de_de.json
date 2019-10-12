@@ -1,6 +1,14 @@
 {
     "general.error": "Es ist ein Fehler aufgetreten: $error",
     "general.footer": "Befehl angefordert von $user",
+
+    "command.help.title": "Hilfe",
+    "command.help.temporaryDescription": "Wir arbeiten momentan noch an diesem Befehl und werden alles noch übersichtlicher gestalten. Bis dahin müsst ihr hiermit auskommen.",
+    "command.help.error1": "Diese Kategorie existiert nicht. Bitte verwende `$prefixhelp`, um alle Kategorien einzusehen.",
+    "command.help.error2": "Du hast zuviele Argumente verwendet. Bitte gib nur `$prefixhelp` ein oder gib eine Kategorie danach an.",
+    "command.help.description": "Zeigt alle Befehle",
+    "command.help.usage": " [Kategorie]",
+
     "command.language.title": "Sprache",
     "command.language.name": ":flag_de: Deutsch",
     "command.language.error": "Du hast keine gültige Sprachen ID angegeben. Die verfügbaren Sprachen sind $langs.",
@@ -9,8 +17,22 @@
     "command.language.usage": " [Sprache]",
 
     "command.neko.title": "Neko",
-    "command.neko.footer": "Bereitgestellt durch nekos.life",
-    "command.neko.nsfw": "Während alle Bilder SFW sein sollten, können wir nicht garantieren, dass keine NSFW Bilder dabei sind, daher musst du diesen Befehl in einem nsfw Channel verwenden.",
-    "command.neko.description": "Er halte ein zufälliges SFW Bild von einem Neko",
-    "command.neko.usage": ""
+    "command.neko.footer": "⚡ durch nekos.life",
+    "command.neko.description": "Erhalte ein zufälliges SFW Bild von einem Neko",
+    "command.neko.usage": "",
+
+    "command.fox.title": "Fuchs",
+    "command.fox.footer": "⚡ durch randomfox.ca",
+    "command.fox.description": "Erhalte ein zufälliges Bild von einem Fuchs",
+    "command.fox.usage": "",
+
+    "command.taiga.title": "Taiga",
+    "command.taiga.footer": "⚡ durch toradorapi.crugg.de",
+    "command.taiga.description": "Erhalte ein zufälliges Bild von Taiga aus Toradora!",
+    "command.taiga.usage": "",
+
+    "command.about.title": "Über den Bot",
+    "command.about.text": "Hey! Dieser Bot wurde von CRUGG entwickelt. Wenn du Programmierer bist, kannst du einige meiner Projekte auf [GitHub](https://github.com/OfficialCRUGG) finden.",
+    "command.about.description": "Informationen zum Bot",
+    "command.about.usage": ""
 }
