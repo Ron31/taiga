@@ -44,6 +44,7 @@ module.exports.run = async (cmd, client, args, message) => {
                     .setFooter(client.config.title + " ● " + (await client.string(message.guild, "general.footer")).replace("$user", message.author.tag));
                 message.channel.send(embed);
             } else {
+                if(!results) client.database.query("INSERT INTO `guilds_settings`(`guild`, `language`, `music`) VALUES ('?','en_us',0)", [message.guild.id]);
                 let embed = new RichEmbed()
                     .setTitle(client.config.title + " - " + await client.string(message.guild, "command.language.title"))
                     .setDescription((await client.string(message.guild, "command.language.success")).replace("$lang", "`" + langId + "`"))
