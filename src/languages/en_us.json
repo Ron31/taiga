@@ -46,7 +46,7 @@
     "command.give.title": "Give Taigacoins",
     "command.give.given": "$author gave $target 〒$amount Taigacoins",
     "command.give.notEnoughMoney": "You don't have enough money to give $target 〒$amount Taigacoins",
-    "command.give.description": "Gives someone else your Taigacoins",
+    "command.give.description": "Give Taigacoins to another user",
     "command.give.usage": " <@User> <Amount>",
 
     "command.leaderboard.title": "Leaderboard",
