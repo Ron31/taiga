@@ -1,6 +1,18 @@
 # taiga
 This is a multi-functional Discord Bot based on the character Taiga Aisaka (逢坂 大河) from the anime "Toradora!"
 
+## Features
+* Basic Economy
+* Random Image Commands
+
+## Todo / Planned
+* Advanced Economy Features
+* Image Profile Card
+* Music
+* Moderation
+* Other useful stuff
+* Webinterface (maybe)
+
 ## Contribution Guidelines
 ### Gitmoji
 Always add an Emoji from [gitmoji](https://gitmoji.carloscuesta.me/), whose description fits your commit the best, in front of your commit message.
