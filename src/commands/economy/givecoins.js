@@ -49,7 +49,7 @@ module.exports.run = async (cmd, client, args, message) => {
     } else {
         let embed = new RichEmbed()
             .setTitle(client.config.title + " - " + await client.string(message.guild, "command.give.title"))
-            .setDescription((await client.string(message.guild, "command.give.error")).replace("$command", client.config.prefix + "givecoins" + await client.string(message.guild, "command.give.usage")))
+            .setDescription((await client.string(message.guild, "general.syntax")).replace("$command", client.config.prefix + "givecoins" + await client.string(message.guild, "command.give.usage")))
             .setColor(client.config.color)
             .setFooter(client.config.title + " ● " + (await client.string(message.guild, "general.footer")).replace("$user", message.author.tag));
         message.channel.send(embed);

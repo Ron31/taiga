@@ -2,6 +2,7 @@
     "general.error": "Es ist ein Fehler aufgetreten: $error",
     "general.footer": "Befehl angefordert von $user",
     "general.userNotFound": "Der angegebene Nutzer wurde nicht gefunden",
+    "general.syntax": "Falscher Syntax Bite benutze $command",
 
     "command.help.title": "Hilfe",
     "command.help.error1": "Diese Kategorie existiert nicht. Bitte verwende `$prefixhelp`, um alle Kategorien einzusehen.",
@@ -43,7 +44,6 @@
     "command.coins.usage": "",
 
     "command.give.title": "Taigacoins Geben",
-    "command.give.error": "Falscher Syntax Bite benutze $command",
     "command.give.given": "$author hat $target 〒$amount Taigacoins gegeben",
     "command.give.notEnoughMoney": "Du hast nicht genügend Geld um $target 〒$amount Taigacoins zu geben",
     "command.give.description": "Gibt jemand anderem deine Taigacoins",
@@ -52,5 +52,17 @@
     "command.leaderboard.title": "Bestenliste",
     "command.leaderboard.unknown": "Unbekannt",
     "command.leaderboard.description": "Zeigt die Top 10 Nutzer mit dem meisten Geld an",
-    "command.leaderboard.usage": ""
+    "command.leaderboard.usage": "",
+
+    "command.anime.title": "Anime",
+    "command.anime.footer": "⚡ durch myanimelist.net / jikan.moe",
+    "command.anime.type": "Typ",
+    "command.anime.source": "Original",
+    "command.anime.episodes": "Episoden",
+    "command.anime.status": "Status",
+    "command.anime.score": "Bewertung",
+    "command.anime.premiered": "Premiere",
+    "command.anime.genres": "Genres",
+    "command.anime.description": "Erhalte Informationen zu einem Anime",
+    "command.anime.usage": " <Name>"
 }
