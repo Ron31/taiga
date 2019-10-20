@@ -1,6 +1,7 @@
 {
     "general.error": "An error occured: $error",
     "general.footer": "Command requested by $user",
+    "general.userNotFound": "The User wasn't found",
 
     "command.help.title": "Help",
     "command.help.temporaryDescription": "We are still working on this command and we'll sort it more. For now, you have to use this.",
@@ -34,5 +35,18 @@
     "command.about.title": "About",
     "command.about.text": "Hey there! This bot was developed by CRUGG. If you are a programmer, you can find some other projects of mine on [GitHub](https://github.com/OfficialCRUGG)",
     "command.about.description": "Information about the bot",
-    "command.about.usage": ""
+    "command.about.usage": "",
+
+    "command.coins.title": "Taigacoins",
+    "command.coins.amount": "You have 〒$coins Taigacoins.",
+    "command.coins.amountOther": "$user has 〒$coins Taigacoins.",
+    "command.coins.description": "Shows your amount of 〒 (Taigacoins)",
+    "command.coins.usage": "",
+
+    "command.give.title": "Give Taigacoins",
+    "command.give.error": "Wrong Syntax. Please use $command",
+    "command.give.given": "$author gave $target 〒$amount Taigacoins",
+    "command.give.notEnoughMoney": "You don't have enough money to give $target 〒$amount Taigacoins",
+    "command.give.description": "Gives someone else your Taigacoins",
+    "command.give.usage": " <@User> <Amount>"
 }

@@ -9,6 +9,8 @@ client.commands = new Collection();
 client.groups = [];
 client.string = require("./utils/lang").string;
 
+client.economy = require("./utils/economy");
+
 const fs = require("fs");
 
 let cmdDir = fs.readdirSync("./commands/");

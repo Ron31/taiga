@@ -1,9 +1,13 @@
 const fs = require("fs");
 
 module.exports = async (client, message) => {
+
     if (message.author.bot) return;
     if (message.channel.type === "dm") return;
 
+    let money = Math.random() * (2 - 1) + 1;
+    client.economy.addCoins(message.author, money);
+    
     let prefix = client.config.prefix;
     let messageArray = message.content.split(" ");
     let cmd = messageArray[0];

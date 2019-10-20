@@ -1,6 +1,7 @@
 {
     "general.error": "Es ist ein Fehler aufgetreten: $error",
     "general.footer": "Befehl angefordert von $user",
+    "general.userNotFound": "Der angegebene Nutzer wurde nicht gefunden",
 
     "command.help.title": "Hilfe",
     "command.help.temporaryDescription": "Wir arbeiten momentan noch an diesem Befehl und werden alles noch übersichtlicher gestalten. Bis dahin müsst ihr hiermit auskommen.",
@@ -34,5 +35,18 @@
     "command.about.title": "Über den Bot",
     "command.about.text": "Hey! Dieser Bot wurde von CRUGG entwickelt. Wenn du Programmierer bist, kannst du einige meiner Projekte auf [GitHub](https://github.com/OfficialCRUGG) finden.",
     "command.about.description": "Informationen zum Bot",
-    "command.about.usage": ""
+    "command.about.usage": "",
+
+    "command.coins.title": "Taigacoins",
+    "command.coins.amount": "Du besitzt momentan 〒$coins Taigacoins.",
+    "command.coins.amountOther": "$user hat momentan 〒$coins Taigacoins.",
+    "command.coins.description": "Zeigt die Anzahl deiner 〒 (Taigacoins)",
+    "command.coins.usage": "",
+
+    "command.givecoins.title": "Taigacoins Geben",
+    "command.givecoins.error": "Falscher Syntax Bite benutze $command",
+    "command.givecoins.given": "$author hat $target 〒$amount Taigacoins gegeben",
+    "command.givecoins.notEnoughMoney": "Du hast nicht genügend Geld um $target 〒$amount Taigacoins zu geben",
+    "command.givecoins.description": "Gibt jemand anderem deine Taigacoins",
+    "command.givecoins.usage": " <@Nutzer> <Anzahl>"
 }

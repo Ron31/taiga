@@ -16,6 +16,7 @@ module.exports.run = async (cmd, client, args, message) => {
         .setDescription(await client.string(message.guild, "command.help.temporaryDescription"))
         .addField(":gear: Core", "`t+help`, `t+language`, `t+about`")
         .addField(":mountain: Images", "`t+taiga`, `t+fox`, `t+neko`")
+        .addField(":moneybag: Economy", "`t+coins`, `t+givecoins`")
         .setColor(client.config.color)
         .setFooter(client.config.title + " ● " + (await client.string(message.guild, "general.footer")).replace("$user", message.author.tag));
     message.channel.send(embed);
