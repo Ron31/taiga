@@ -10,13 +10,12 @@ module.exports.run = async (cmd, client, args, message) => {
         displayError(2);
     }
     */
-
+    let prefix = client.config.prefix;
     let embed = new RichEmbed()
         .setTitle(client.config.title + " - " + await client.string(message.guild, "command.help.title"))
-        .setDescription(await client.string(message.guild, "command.help.temporaryDescription"))
-        .addField(":gear: Core", "`t+help`, `t+language`, `t+about`")
-        .addField(":mountain: Images", "`t+taiga`, `t+fox`, `t+neko`")
-        .addField(":moneybag: Economy", "`t+coins`, `t+givecoins`")
+        .addField(":gear: Core", "`" + prefix + "help`, `" + prefix + "language`, `" + prefix + "about`")
+        .addField(":mountain: Images", "`" + prefix + "taiga`, `" + prefix + "fox`, `" + prefix + "neko`")
+        .addField(":moneybag: Economy", "`" + prefix + "coins`, `" + prefix + "givecoins`, `" + prefix + "leaderboard`")
         .setColor(client.config.color)
         .setFooter(client.config.title + " ● " + (await client.string(message.guild, "general.footer")).replace("$user", message.author.tag));
     message.channel.send(embed);

@@ -4,7 +4,6 @@
     "general.userNotFound": "Der angegebene Nutzer wurde nicht gefunden",
 
     "command.help.title": "Hilfe",
-    "command.help.temporaryDescription": "Wir arbeiten momentan noch an diesem Befehl und werden alles noch übersichtlicher gestalten. Bis dahin müsst ihr hiermit auskommen.",
     "command.help.error1": "Diese Kategorie existiert nicht. Bitte verwende `$prefixhelp`, um alle Kategorien einzusehen.",
     "command.help.error2": "Du hast zuviele Argumente verwendet. Bitte gib nur `$prefixhelp` ein oder gib eine Kategorie danach an.",
     "command.help.description": "Zeigt alle Befehle",
@@ -48,5 +47,10 @@
     "command.give.given": "$author hat $target 〒$amount Taigacoins gegeben",
     "command.give.notEnoughMoney": "Du hast nicht genügend Geld um $target 〒$amount Taigacoins zu geben",
     "command.give.description": "Gibt jemand anderem deine Taigacoins",
-    "command.give.usage": " <@Nutzer> <Anzahl>"
+    "command.give.usage": " <@Nutzer> <Anzahl>",
+
+    "command.leaderboard.title": "Bestenliste",
+    "command.leaderboard.unknown": "Unbekannt",
+    "command.leaderboard.description": "Zeigt die Top 10 Nutzer mit dem meisten Geld an",
+    "command.leaderboard.usage": ""
 }

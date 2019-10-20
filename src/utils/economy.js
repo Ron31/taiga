@@ -42,3 +42,11 @@ module.exports.getCoins = function(user) {
         });
     });
 }
+
+module.exports.getTopTen = function() {
+    return new Promise(function (resolve, reject) {
+        database.query("SELECT * FROM users_money ORDER BY taigacoins DESC LIMIT 10", [], async (err, results) => {
+            resolve(results);
+        });
+    });
+}
