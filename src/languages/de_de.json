@@ -64,5 +64,22 @@
     "command.anime.premiered": "Premiere",
     "command.anime.genres": "Genres",
     "command.anime.description": "Erhalte Informationen zu einem Anime",
-    "command.anime.usage": " <Name>"
+    "command.anime.usage": " <Name>",
+
+    "command.wynncraft.title": "Wynncraft",
+    "command.wynncraft.footer": "⚡ durch wynncraft.com",
+    "command.wynncraft.playerNotFound": "Es wurden keine Statistiken für diesen Spieler gefunden.",
+    "command.wynncraft.general": "Generelle Statistiken",
+    "command.wynncraft.general.rank": "Rang",
+    "command.wynncraft.profile": "Profil $number",
+    "command.wynncraft.profile.className": "Klasse",
+    "command.wynncraft.profile.level": "Level",
+    "command.wynncraft.profile.questsCompleted": "Quests abgeschlossen",
+    "command.wynncraft.profile.mobsKilled": "Mobs getötet",
+    "command.wynncraft.profile.blocksWalked": "Blöcke gelaufen",
+    "command.wynncraft.profile.logins": "Logins",
+    "command.wynncraft.profile.deaths": "Tode",
+    "command.wynncraft.profile.chestsFound": "Truhen gefunden",
+    "command.wynncraft.description": "Erhalte die Statistiken eines Spielers auf dem Wynncraft Minecraft Server",
+    "command.wynncraft.usage": " <Name>"
 }
