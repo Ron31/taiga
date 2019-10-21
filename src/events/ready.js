@@ -17,11 +17,11 @@ module.exports = async (client) => {
     app.use(bodyparser.json({type: "application/json"}));
     app.use(bodyparser.urlencoded({extended: true}));
 
-    router.get("/", (req, res) => {
+    app.get("/", (req, res) => {
         res.json({ success: false, error: "You haven't specified an endpoint.", data: {}});
     });
     
-    router.get("/getLeaderboard", async (req, res) => {
+    app.get("/getLeaderboard", async (req, res) => {
         let topTen = await client.economy.getTopTen()
         let leaderboard = [];
         for(i = 0; i < topTen.length; i++) {
