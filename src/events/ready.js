@@ -21,7 +21,7 @@ module.exports = async (client) => {
         res.redirect("https://taiga.js.org/webinterface")
     })
 
-    let server = app.listen(7362, "127.0.0.1", async () => {
+    let server = app.listen(process.env.API_PORT, process.env.API_IP, async () => {
         client.log.info("Express App started...", "I_EXPRESS");
     });
 };
