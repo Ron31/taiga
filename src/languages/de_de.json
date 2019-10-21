@@ -51,6 +51,7 @@
 
     "command.leaderboard.title": "Bestenliste",
     "command.leaderboard.unknown": "Unbekannt",
+    "command.leaderboard.text": "Du kannst die Bestenliste [hier]($url) finden.",
     "command.leaderboard.description": "Zeigt die Top 10 Nutzer mit dem meisten Geld an",
     "command.leaderboard.usage": "",
 
@@ -81,5 +82,23 @@
     "command.wynncraft.profile.deaths": "Tode",
     "command.wynncraft.profile.chestsFound": "Truhen gefunden",
     "command.wynncraft.description": "Erhalte die Statistiken eines Spielers auf dem Wynncraft Minecraft Server",
-    "command.wynncraft.usage": " <Name>"
+    "command.wynncraft.usage": " <Name>",
+
+    "command.cp.title": "Controlpanel",
+    "command.cp.text": "Ein Link zum Controlpanel wurde dir per DM geschickt, sofern du diese aktiviert hast. Teile diesen Link mit niemandem.",
+    "command.cp.dm": "Hier ist dein Controlpanel Link. Achte darauf, diesen Link nicht an andere weiterzugeben, da er diesen Zugang zu deinem Konto ermöglichen würde. Dieser Link wird in 1-1,5 Stunden zurückgesetzt. Wenn du ihn versehentlich veröffentlichst, verwende den Befehl `resetcptoken`. \n$url",
+    "command.cp.description": "Gives you a link to the control panel",
+    "command.cp.usage": "",
+
+    "command.daily.title": "Daily",
+    "command.daily.text": "Du hast erfolgreich deine täglichen 〒$coins abgeholt. Komme in 24 Stunden wieder.",
+    "command.daily.error": "Du hast deine tägliche Belohnung schon innerhalb der letzten 24 Stunden abgeholt.",
+    "command.daily.description": "Hole deine tägliche Belohnung ab",
+    "command.daily.usage": "",
+
+    "command.weekly.title": "Weekly",
+    "command.weekly.text": "Du hast erfolgreich deine wöchentlichen 〒$coins abgeholt. Komme in 7 Tagen wieder.",
+    "command.weekly.error": "Du hast deine wöchentliche Belohnung schon innerhalb der letzten 7 Tage abgeholt.",
+    "command.weekly.description": "Hole deine wöchentliche Belohnung ab",
+    "command.weekly.usage": ""
 }

@@ -10,6 +10,7 @@ client.groups = [];
 client.string = require("./utils/lang").string;
 
 client.economy = require("./utils/economy");
+client.dbutils = require("./utils/dbutils");
 
 const fs = require("fs");
 

@@ -51,6 +51,7 @@
 
     "command.leaderboard.title": "Leaderboard",
     "command.leaderboard.unknown": "Unknown",
+    "command.leaderboard.text": "You can find the leaderboard [here]($url).",
     "command.leaderboard.description": "Shows the Top 10 Users with the most money",
     "command.leaderboard.usage": "",
 
@@ -81,5 +82,23 @@
     "command.wynncraft.profile.deaths": "Deaths",
     "command.wynncraft.profile.chestsFound": "Chests found",
     "command.wynncraft.description": "Gets stats of a user on the Wynncraft Minecraft Server",
-    "command.wynncraft.usage": " <Name>"
+    "command.wynncraft.usage": " <Name>",
+
+    "command.cp.title": "Controlpanel",
+    "command.cp.text": "A link to the control panel has been sent to you in DMs, if you have them enabled. Do not share this link with anybody.",
+    "command.cp.dm": "Here is your control panel link. Be sure to not give this link to anyone, as it would give them access to your account. This link will reset in 1-1,5 Hours. If you accidently publish it, use the `resetcptoken` command.\n$url",
+    "command.cp.description": "Gives you a link to the control panel",
+    "command.cp.usage": "",
+
+    "command.daily.title": "Daily",
+    "command.daily.text": "You have successfully claimed your daily 〒$coins. Check back in 24 hours.",
+    "command.daily.error": "You have already claimed your daily coins within the last 24 hours.",
+    "command.daily.description": "Claim your daily reward.",
+    "command.daily.usage": "",
+
+    "command.weekly.title": "Weekly",
+    "command.weekly.text": "You have successfully claimed your weekly 〒$coins. Check back in 7 days.",
+    "command.weekly.error": "You have already claimed your weekly coins within the last 7 days.",
+    "command.weekly.description": "Claim your weekly reward.",
+    "command.weekly.usage": ""
 }

@@ -15,7 +15,7 @@ module.exports.run = async (cmd, client, args, message) => {
         .setTitle(client.config.title + " - " + await client.string(message.guild, "command.help.title"))
         .addField(":gear: Core", "`" + prefix + "help`, `" + prefix + "language`, `" + prefix + "about`")
         .addField(":mountain: Images", "`" + prefix + "taiga`, `" + prefix + "fox`, `" + prefix + "neko`")
-        .addField(":moneybag: Economy", "`" + prefix + "coins`, `" + prefix + "givecoins`, `" + prefix + "leaderboard`")
+        .addField(":moneybag: Economy", "`" + prefix + "coins`, `" + prefix + "givecoins`, `" + prefix + "leaderboard`, `" + prefix + "daily`, `" + prefix + "weekly`")
         .addField(":tada: Fun", "`" + prefix + "anime`, `" + prefix + "wynncraft`")
         .setColor(client.config.color)
         .setFooter(client.config.title + " ● " + (await client.string(message.guild, "general.footer")).replace("$user", message.author.tag));

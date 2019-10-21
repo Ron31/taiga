@@ -1,6 +1,7 @@
 const { RichEmbed } = require("discord.js");
 
 module.exports.run = async (cmd, client, args, message) => {
+    /*
     let emojis = [":one:", ":two:", ":three:", ":four:", ":five:", ":six:", ":seven:", ":eight:", ":nine:", ":keycap_ten:"];
     let topTen = await client.economy.getTopTen();
     let leaderboardString = "";
@@ -12,9 +13,10 @@ module.exports.run = async (cmd, client, args, message) => {
         }
         leaderboardString += emojis[i] + " " + user + " | 〒" + topTen[i].taigacoins + "\n";
     }
+    */
     let embed = new RichEmbed()
     .setTitle(client.config.title + " - " + await client.string(message.guild, "command.leaderboard.title"))
-    .setDescription(leaderboardString)
+    .setDescription((await client.string(message.guild, "command.leaderboard.text")).replace("$url", "https://taiga.js.org/leaderboard/"))
     .setColor(client.config.color)
     .setFooter(client.config.title + " ● " + (await client.string(message.guild, "general.footer")).replace("$user", message.author.tag));
     message.channel.send(embed);
