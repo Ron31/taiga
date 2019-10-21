@@ -83,7 +83,7 @@ module.exports.weekly = function(user) {
                 this.addCoins(user, 500);
                 resolve(true);
             } else {
-                if((new Date() - results[0].dailyLast) >= 604800000) {
+                if((new Date() - results[0].weeklyLast) >= 604800000) {
                     database.query("UPDATE users_cooldowns SET weeklyLast = ? WHERE user = ?", [new Date(), user.id]);
                     this.addCoins(user, 500);
                     resolve(true);
