@@ -43,4 +43,12 @@ fs.readdir("./events", (err, files) => {
 
 client.login(process.env.BOT_TOKEN);
 
+if(process.env.TYPE == "production") {
+    const botlister = new (require('botlister'))({ apiToken: process.env.DBL_TOKEN, defaultBotId: '618856533144502284' })
+    botlister.updateBotStatistics({
+        guilds: client.guilds.size,
+        users: client.users.size,
+    }).catch(console.error);
+}
+
 module.exports.client = client;
