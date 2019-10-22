@@ -1,18 +1,18 @@
 const { RichEmbed } = require("discord.js");
 
 module.exports.run = async (cmd, client, args, message) => {
-    let result = await client.economy.daily(message.author);
+    let result = await client.economy.monthly(message.author);
     if(result == true) {
         let embed = new RichEmbed()
-        .setTitle(client.config.title + " - " + await client.string(message.guild, "command.daily.title"))
-        .setDescription((await client.string(message.guild, "command.daily.text")).replace("$coins", "250"))
+        .setTitle(client.config.title + " - " + await client.string(message.guild, "command.monthly.title"))
+        .setDescription((await client.string(message.guild, "command.monthly.text")).replace("$coins", "1000"))
         .setColor(client.config.color)
         .setFooter(client.config.title + " ● " + (await client.string(message.guild, "general.footer")).replace("$user", message.author.tag));
         message.channel.send(embed);
     } else {
         let embed = new RichEmbed()
-        .setTitle(client.config.title + " - " + await client.string(message.guild, "command.daily.title"))
-        .setDescription(await client.string(message.guild, "command.daily.error"))
+        .setTitle(client.config.title + " - " + await client.string(message.guild, "command.monthly.title"))
+        .setDescription(await client.string(message.guild, "command.monthly.error"))
         .setColor(client.config.color)
         .setFooter(client.config.title + " ● " + (await client.string(message.guild, "general.footer")).replace("$user", message.author.tag));
         message.channel.send(embed);
@@ -20,7 +20,7 @@ module.exports.run = async (cmd, client, args, message) => {
 };
 
 module.exports.help = {
-    name: "daily",
-    description: "command.daily.description",
-    usage: "command.daily.usage"
+    name: "monthly",
+    description: "command.monthly.description",
+    usage: "command.monthly.usage"
 };

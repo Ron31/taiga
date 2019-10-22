@@ -90,6 +90,12 @@
     "command.cp.description": "Gives you a link to the control panel",
     "command.cp.usage": "",
 
+    "command.hourly.title": "Hourly",
+    "command.hourly.text": "You have successfully claimed your hourly 〒$coins. Check back in 60 minutes.",
+    "command.hourly.error": "You have already claimed your hourly coins within the last 60 minutes.",
+    "command.hourly.description": "Claim your hourly reward.",
+    "command.hourly.usage": "",
+
     "command.daily.title": "Daily",
     "command.daily.text": "You have successfully claimed your daily 〒$coins. Check back in 24 hours.",
     "command.daily.error": "You have already claimed your daily coins within the last 24 hours.",
@@ -100,5 +106,11 @@
     "command.weekly.text": "You have successfully claimed your weekly 〒$coins. Check back in 7 days.",
     "command.weekly.error": "You have already claimed your weekly coins within the last 7 days.",
     "command.weekly.description": "Claim your weekly reward.",
-    "command.weekly.usage": ""
+    "command.weekly.usage": "",
+
+    "command.monthly.title": "Monthly",
+    "command.monthly.text": "You have successfully claimed your monthly 〒$coins. Check back in 30 days.",
+    "command.monthly.error": "You have already claimed your monthly coins within the last 30 days.",
+    "command.monthly.description": "Claim your monthly reward.",
+    "command.monthly.usage": ""
 }

@@ -90,15 +90,27 @@
     "command.cp.description": "Gives you a link to the control panel",
     "command.cp.usage": "",
 
-    "command.daily.title": "Daily",
+    "command.hourly.title": "Stündliche Belohnung",
+    "command.hourly.text": "Du hast erfolgreich deine stündlichen 〒$coins abgeholt. Komme in 60 Minuten wieder.",
+    "command.hourly.error": "Du hast deine stündliche Belohnung schon innerhalb der letzten 60 Minuten abgeholt.",
+    "command.hourly.description": "Hole deine stündliche Belohnung ab",
+    "command.hourly.usage": "",
+
+    "command.daily.title": "Tägliche Belohnung",
     "command.daily.text": "Du hast erfolgreich deine täglichen 〒$coins abgeholt. Komme in 24 Stunden wieder.",
     "command.daily.error": "Du hast deine tägliche Belohnung schon innerhalb der letzten 24 Stunden abgeholt.",
     "command.daily.description": "Hole deine tägliche Belohnung ab",
     "command.daily.usage": "",
 
-    "command.weekly.title": "Weekly",
+    "command.weekly.title": "Wöchtentliche Belohznung",
     "command.weekly.text": "Du hast erfolgreich deine wöchentlichen 〒$coins abgeholt. Komme in 7 Tagen wieder.",
     "command.weekly.error": "Du hast deine wöchentliche Belohnung schon innerhalb der letzten 7 Tage abgeholt.",
     "command.weekly.description": "Hole deine wöchentliche Belohnung ab",
-    "command.weekly.usage": ""
+    "command.weekly.usage": "",
+
+    "command.monthly.title": "Monatliche Belohnung",
+    "command.monthly.text": "Du hast erfolgreich deine monatlichen 〒$coins abgeholt. Komme in 30 Tagen wieder.",
+    "command.monthly.error": "Du hast deine monatliche Belohnung schon innerhalb der letzten 30 Tage abgeholt.",
+    "command.monthly.description": "Hole deine monatliche Belohnung ab",
+    "command.monthly.usage": ""
 }
