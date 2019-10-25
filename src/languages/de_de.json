@@ -111,5 +111,19 @@
     "command.monthly.text": "Du hast erfolgreich deine monatlichen 〒$coins abgeholt. Komme in 30 Tagen wieder.",
     "command.monthly.error": "Du hast deine monatliche Belohnung schon innerhalb der letzten 30 Tage abgeholt.",
     "command.monthly.description": "Hole deine monatliche Belohnung ab",
-    "command.monthly.usage": ""
+    "command.monthly.usage": "",
+
+    "command.osu.title": "Osu",
+    "command.osu.footer": "⚡ durch osu.ppy.sh",
+    "command.osu.playerNotFound": "Es wurden keine Statistiken für diesen Spieler gefunden.",
+    "command.osu.pp": "PP",
+    "command.osu.accuracy": "Genauigkeit",
+    "command.osu.rankGlobal": "Globale Rangliste",
+    "command.osu.rankLocal": "Länder Rangliste",
+    "command.osu.level": "Level",
+    "command.osu.totalScore": "Gesamtpunktzahl",
+    "command.osu.playcount": "Play-Anzahl",
+    "command.osu.joinDate": "Beitrittsdatum",
+    "command.osu.description": "Erhalte die Statistiken eines Spielers in dem Spiel osu!",
+    "command.osu.usage": " <Name>"
 }

@@ -111,5 +111,19 @@
     "command.monthly.text": "You have successfully claimed your monthly 〒$coins. Check back in 30 days.",
     "command.monthly.error": "You have already claimed your monthly coins within the last 30 days.",
     "command.monthly.description": "Claim your monthly reward.",
-    "command.monthly.usage": ""
+    "command.monthly.usage": "",
+
+    "command.osu.title": "Osu",
+    "command.osu.footer": "⚡ by osu.ppy.sh",
+    "command.osu.playerNotFound": "There weren't any stats found for that player.",
+    "command.osu.pp": "PP",
+    "command.osu.accuracy": "Accuracy",
+    "command.osu.rankGlobal": "Global Ranking",
+    "command.osu.rankLocal": "Country Ranking",
+    "command.osu.level": "Level",
+    "command.osu.totalScore": "Total score",
+    "command.osu.playcount": "Play count",
+    "command.osu.joinDate": "Join date",
+    "command.osu.description": "Gets stats of a user in the game osu!",
+    "command.osu.usage": " <Name>"
 }
