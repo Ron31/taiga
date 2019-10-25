@@ -125,5 +125,5 @@
     "command.osu.playcount": "Play-Anzahl",
     "command.osu.joinDate": "Beitrittsdatum",
     "command.osu.description": "Erhalte die Statistiken eines Spielers in dem Spiel osu!",
-    "command.osu.usage": " <Name>"
+    "command.osu.usage": " <Name> [[--exact]]"
 }
