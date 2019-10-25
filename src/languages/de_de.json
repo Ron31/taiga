@@ -3,58 +3,48 @@
     "general.footer": "Befehl angefordert von $user",
     "general.userNotFound": "Der angegebene Nutzer wurde nicht gefunden",
     "general.syntax": "Falscher Syntax Bite benutze $command",
-
     "command.help.title": "Hilfe",
     "command.help.error1": "Diese Kategorie existiert nicht. Bitte verwende `$prefixhelp`, um alle Kategorien einzusehen.",
     "command.help.error2": "Du hast zuviele Argumente verwendet. Bitte gib nur `$prefixhelp` ein oder gib eine Kategorie danach an.",
     "command.help.description": "Zeigt alle Befehle",
     "command.help.usage": " [Kategorie]",
-
     "command.language.title": "Sprache",
     "command.language.name": ":flag_de: Deutsch",
     "command.language.error": "Du hast keine gültige Sprachen ID angegeben. Die verfügbaren Sprachen sind $langs.",
     "command.language.success": "Die Sprache wurde erfolgreich zu $lang gewechselt.",
     "command.language.description": "Ändere die Sprache vom Bot auf diesem Server",
     "command.language.usage": " [Sprache]",
-
     "command.neko.title": "Neko",
     "command.neko.footer": "⚡ durch nekos.life",
     "command.neko.description": "Erhalte ein zufälliges SFW Bild von einem Neko",
     "command.neko.usage": "",
-
     "command.fox.title": "Fuchs",
     "command.fox.footer": "⚡ durch randomfox.ca",
     "command.fox.description": "Erhalte ein zufälliges Bild von einem Fuchs",
     "command.fox.usage": "",
-
     "command.taiga.title": "Taiga",
     "command.taiga.footer": "⚡ durch toradorapi.crugg.de",
     "command.taiga.description": "Erhalte ein zufälliges Bild von Taiga aus Toradora!",
     "command.taiga.usage": "",
-
     "command.about.title": "Über den Bot",
     "command.about.text": "Hey! Dieser Bot wurde von CRUGG entwickelt. Wenn du Programmierer bist, kannst du einige meiner Projekte auf [GitHub](https://github.com/OfficialCRUGG) finden.",
     "command.about.description": "Informationen zum Bot",
     "command.about.usage": "",
-
     "command.coins.title": "Taigacoins",
     "command.coins.amount": "Du besitzt momentan 〒$coins Taigacoins.",
     "command.coins.amountOther": "$user hat momentan 〒$coins Taigacoins.",
     "command.coins.description": "Zeigt die Anzahl deiner 〒 (Taigacoins)",
     "command.coins.usage": "",
-
     "command.give.title": "Taigacoins Geben",
     "command.give.given": "$author hat $target 〒$amount Taigacoins gegeben",
     "command.give.notEnoughMoney": "Du hast nicht genügend Geld um $target 〒$amount Taigacoins zu geben",
     "command.give.description": "Gibt jemand anderem deine Taigacoins",
     "command.give.usage": " <@Nutzer> <Anzahl>",
-
     "command.leaderboard.title": "Bestenliste",
     "command.leaderboard.unknown": "Unbekannt",
     "command.leaderboard.text": "Du kannst die Bestenliste [hier]($url) finden.",
     "command.leaderboard.description": "Zeigt die Top 10 Nutzer mit dem meisten Geld an",
     "command.leaderboard.usage": "",
-
     "command.anime.title": "Anime",
     "command.anime.footer": "⚡ durch myanimelist.net / jikan.moe",
     "command.anime.type": "Typ",
@@ -66,7 +56,6 @@
     "command.anime.genres": "Genres",
     "command.anime.description": "Erhalte Informationen zu einem Anime",
     "command.anime.usage": " <Name>",
-
     "command.wynncraft.title": "Wynncraft",
     "command.wynncraft.footer": "⚡ durch wynncraft.com",
     "command.wynncraft.playerNotFound": "Es wurden keine Statistiken für diesen Spieler gefunden.",
@@ -83,36 +72,30 @@
     "command.wynncraft.profile.chestsFound": "Truhen gefunden",
     "command.wynncraft.description": "Erhalte die Statistiken eines Spielers auf dem Wynncraft Minecraft Server",
     "command.wynncraft.usage": " <Name>",
-
     "command.cp.title": "Controlpanel",
     "command.cp.text": "Ein Link zum Controlpanel wurde dir per DM geschickt, sofern du diese aktiviert hast. Teile diesen Link mit niemandem.",
     "command.cp.dm": "Hier ist dein Controlpanel Link. Achte darauf, diesen Link nicht an andere weiterzugeben, da er diesen Zugang zu deinem Konto ermöglichen würde. Dieser Link wird in 1-1,5 Stunden zurückgesetzt. Wenn du ihn versehentlich veröffentlichst, verwende den Befehl `resetcptoken`. \n$url",
     "command.cp.description": "Gives you a link to the control panel",
     "command.cp.usage": "",
-
     "command.hourly.title": "Stündliche Belohnung",
     "command.hourly.removed": "Stündliche Belohnungen wurden entfernt!",
     "command.hourly.description": "Hole deine stündliche Belohnung ab",
     "command.hourly.usage": "",
-
     "command.daily.title": "Tägliche Belohnung",
     "command.daily.text": "Du hast erfolgreich deine täglichen 〒$coins abgeholt. Komme in 24 Stunden wieder.",
     "command.daily.error": "Du hast deine tägliche Belohnung schon innerhalb der letzten 24 Stunden abgeholt.",
     "command.daily.description": "Hole deine tägliche Belohnung ab",
     "command.daily.usage": "",
-
     "command.weekly.title": "Wöchtentliche Belohznung",
     "command.weekly.text": "Du hast erfolgreich deine wöchentlichen 〒$coins abgeholt. Komme in 7 Tagen wieder.",
     "command.weekly.error": "Du hast deine wöchentliche Belohnung schon innerhalb der letzten 7 Tage abgeholt.",
     "command.weekly.description": "Hole deine wöchentliche Belohnung ab",
     "command.weekly.usage": "",
-
     "command.monthly.title": "Monatliche Belohnung",
     "command.monthly.text": "Du hast erfolgreich deine monatlichen 〒$coins abgeholt. Komme in 30 Tagen wieder.",
     "command.monthly.error": "Du hast deine monatliche Belohnung schon innerhalb der letzten 30 Tage abgeholt.",
     "command.monthly.description": "Hole deine monatliche Belohnung ab",
     "command.monthly.usage": "",
-
     "command.osu.title": "Osu",
     "command.osu.footer": "⚡ durch osu.ppy.sh",
     "command.osu.playerNotFound": "Es wurden keine Statistiken für diesen Spieler gefunden.",

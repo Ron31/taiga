@@ -8,11 +8,25 @@ module.exports = {
                     let lang = "en_us";
                     database.query("INSERT INTO `guilds_settings`(`guild`, `language`, `music`) VALUES (?,?,?)", [guild.id, lang, false]);
                     let langFile = require("../languages/" + lang + ".json");
-                    resolve(langFile[string]);
+                    if(!langFile[string]) {
+                        resolve("[String not found: " + string + "]");
+                    } else {
+                        resolve(langFile[string]);
+                    }
                 } else {
                     let lang = results[0].language;
                     let langFile = require("../languages/" + lang + ".json");
-                    resolve(langFile[string]);
+                    if(langFile[string]) {
+                        resolve(langFile[string]);
+                    } else {
+                        lang = "en_us";
+                        langFile = require("../languages/" + lang + ".json");
+                        if(langFile[string]) {
+                            resolve(langFile[string]);
+                        } else {
+                            resolve("[String not found: " + string + "]");
+                        }
+                    }
                 }
             });
         });

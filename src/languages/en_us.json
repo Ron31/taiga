@@ -3,58 +3,48 @@
     "general.footer": "Command requested by $user",
     "general.userNotFound": "The User wasn't found",
     "general.syntax": "Wrong Syntax. Please use $command",
-
     "command.help.title": "Help",
     "command.help.error1": "This category doesn't exist. Please use `$prefixhelp` to view all categories.",
     "command.help.error2": "You have entered too many Arguments. Please either just run `$prefixhelp` or specifiy a category after it.",
     "command.help.description": "Shows all commands",
     "command.help.usage": " [Category]",
-
     "command.language.title": "Language",
     "command.language.name": ":flag_us: American English",
     "command.language.error": "You haven't provided a valid language ID. Available languages are $langs.",
     "command.language.success": "Language sucessfully changed to $lang",
     "command.language.description": "Change the bot's language on this server",
     "command.language.usage": " [Language]",
-
     "command.neko.title": "Neko",
     "command.neko.footer": "⚡ by nekos.life",
     "command.neko.description": "Get a random SFW image of a neko",
     "command.neko.usage": "",
-
     "command.fox.title": "Fox",
     "command.fox.footer": "⚡ by randomfox.ca",
     "command.fox.description": "Get a random image of a fox",
     "command.fox.usage": "",
-
     "command.taiga.title": "Taiga",
     "command.taiga.footer": "⚡ by toradorapi.crugg.de",
     "command.taiga.description": "Get a random image of Taiga from Toradora!",
     "command.taiga.usage": "",
-
     "command.about.title": "About",
     "command.about.text": "Hey there! This bot was developed by CRUGG. If you are a programmer, you can find some other projects of mine on [GitHub](https://github.com/OfficialCRUGG)",
     "command.about.description": "Information about the bot",
     "command.about.usage": "",
-
     "command.coins.title": "Taigacoins",
     "command.coins.amount": "You have 〒$coins Taigacoins.",
     "command.coins.amountOther": "$user has 〒$coins Taigacoins.",
     "command.coins.description": "Shows your amount of 〒 (Taigacoins)",
     "command.coins.usage": "",
-
     "command.give.title": "Give Taigacoins",
     "command.give.given": "$author gave $target 〒$amount Taigacoins",
     "command.give.notEnoughMoney": "You don't have enough money to give $target 〒$amount Taigacoins",
     "command.give.description": "Give Taigacoins to another user",
     "command.give.usage": " <@User> <Amount>",
-
     "command.leaderboard.title": "Leaderboard",
     "command.leaderboard.unknown": "Unknown",
     "command.leaderboard.text": "You can find the leaderboard [here]($url).",
     "command.leaderboard.description": "Shows the Top 10 Users with the most money",
     "command.leaderboard.usage": "",
-
     "command.anime.title": "Anime",
     "command.anime.footer": "⚡ by myanimelist.net / jikan.moe",
     "command.anime.type": "Type",
@@ -66,7 +56,6 @@
     "command.anime.genres": "Genres",
     "command.anime.description": "Get information on an anime",
     "command.anime.usage": " <Name>",
-
     "command.wynncraft.title": "Wynncraft",
     "command.wynncraft.footer": "⚡ by wynncraft.com",
     "command.wynncraft.playerNotFound": "There weren't any stats found for that player.",
@@ -83,36 +72,30 @@
     "command.wynncraft.profile.chestsFound": "Chests found",
     "command.wynncraft.description": "Gets stats of a user on the Wynncraft Minecraft Server",
     "command.wynncraft.usage": " <Name>",
-
     "command.cp.title": "Controlpanel",
     "command.cp.text": "A link to the control panel has been sent to you in DMs, if you have them enabled. Do not share this link with anybody.",
     "command.cp.dm": "Here is your control panel link. Be sure to not give this link to anyone, as it would give them access to your account. This link will reset in 1-1,5 Hours. If you accidently publish it, use the `resetcptoken` command.\n$url",
     "command.cp.description": "Gives you a link to the control panel",
     "command.cp.usage": "",
-
     "command.hourly.title": "Hourly",
     "command.hourly.removed": "Hourly rewards have been removed!",
     "command.hourly.description": "Claim your hourly reward",
     "command.hourly.usage": "",
-
     "command.daily.title": "Daily",
     "command.daily.text": "You have successfully claimed your daily 〒$coins. Check back in 24 hours.",
     "command.daily.error": "You have already claimed your daily coins within the last 24 hours.",
     "command.daily.description": "Claim your daily reward",
     "command.daily.usage": "",
-
     "command.weekly.title": "Weekly",
     "command.weekly.text": "You have successfully claimed your weekly 〒$coins. Check back in 7 days.",
     "command.weekly.error": "You have already claimed your weekly coins within the last 7 days.",
     "command.weekly.description": "Claim your weekly reward",
     "command.weekly.usage": "",
-
     "command.monthly.title": "Monthly",
     "command.monthly.text": "You have successfully claimed your monthly 〒$coins. Check back in 30 days.",
     "command.monthly.error": "You have already claimed your monthly coins within the last 30 days.",
     "command.monthly.description": "Claim your monthly reward",
     "command.monthly.usage": "",
-
     "command.osu.title": "Osu",
     "command.osu.footer": "⚡ by osu.ppy.sh",
     "command.osu.playerNotFound": "There weren't any stats found for that player.",

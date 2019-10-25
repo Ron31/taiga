@@ -1,21 +1,23 @@
 const { RichEmbed } = require("discord.js");
-const langs = ["en_us", "de_de"];
+const langs = ["en_us", "de_de", "fr_fr"];
 
 module.exports.run = async (cmd, client, args, message) => {
-    message.channel.send("The language system is currently broken. DM CRUGG#0001 to change the language. We'll fix it as quick as possible. I promise.");
-    /*
     if(args.length == 0) {
         displayLanguage();
-    } else if(args.length == 1) {
-        if(langs.includes(args[0])) {
-            if(message.member.hasPermission("ADMINISTRATOR")) {
-                updateLanguage(args[0]);
+    } else {
+        if(message.member.hasPermission("ADMINISTRATOR")) {
+            if(args.length == 1) {
+                if(langs.includes(args[0])) {
+                    updateLanguage(args[0]);
+                } else {
+                    displayError();
+                }
+            } else {
+                displayError();
             }
         } else {
-            displayError();
+            displayLanguage();
         }
-    } else {
-        displayError();
     }
 
     async function displayLanguage() {
@@ -56,7 +58,6 @@ module.exports.run = async (cmd, client, args, message) => {
             }
         });
     }
-    */
 };
 
 module.exports.help = {
