@@ -42,6 +42,13 @@ module.exports = async (client) => {
             }
         });
     });
+    app.get("/getCommands", async (req, res) => {
+        res.json({
+            success: false,
+            error: "Endpoint in development. Not functional yet.",
+            data: {}
+        })
+    });
     let server = app.listen(process.env.API_PORT, process.env.API_IP, async () => {
         client.log.info("Express App started...", "I_EXPRESS");
     });
