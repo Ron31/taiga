@@ -91,8 +91,7 @@
     "command.cp.usage": "",
 
     "command.hourly.title": "Hourly",
-    "command.hourly.text": "You have successfully claimed your hourly 〒$coins. Check back in 60 minutes.",
-    "command.hourly.error": "You have already claimed your hourly coins within the last 60 minutes.",
+    "command.hourly.removed": "Hourly rewards have been removed!",
     "command.hourly.description": "Claim your hourly reward.",
     "command.hourly.usage": "",
 

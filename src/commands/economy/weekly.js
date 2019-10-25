@@ -5,7 +5,7 @@ module.exports.run = async (cmd, client, args, message) => {
     if(result == true) {
         let embed = new RichEmbed()
         .setTitle(client.config.title + " - " + await client.string(message.guild, "command.weekly.title"))
-        .setDescription((await client.string(message.guild, "command.weekly.text")).replace("$coins", "500"))
+        .setDescription((await client.string(message.guild, "command.weekly.text")).replace("$coins", "250"))
         .setColor(client.config.color)
         .setFooter(client.config.title + " ● " + (await client.string(message.guild, "general.footer")).replace("$user", message.author.tag));
         message.channel.send(embed);

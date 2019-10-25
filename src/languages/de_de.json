@@ -91,8 +91,7 @@
     "command.cp.usage": "",
 
     "command.hourly.title": "Stündliche Belohnung",
-    "command.hourly.text": "Du hast erfolgreich deine stündlichen 〒$coins abgeholt. Komme in 60 Minuten wieder.",
-    "command.hourly.error": "Du hast deine stündliche Belohnung schon innerhalb der letzten 60 Minuten abgeholt.",
+    "command.hourly.removed": "Stündliche Belohnungen wurden entfernt!",
     "command.hourly.description": "Hole deine stündliche Belohnung ab",
     "command.hourly.usage": "",
 
