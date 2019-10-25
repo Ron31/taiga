@@ -49,6 +49,27 @@ module.exports = async (client) => {
             data: {}
         })
     });
+    app.get("/getLanguages", async (req, res) => {
+        let langs = require("../utils/lang").languages;
+        let langArray = []
+        langs.forEach((lang) => {
+            let name = require("../languages/" + lang + ".json")["command.language.name"];
+            let nameArray = name.split(" ");
+            nameArray.splice(0, 1);
+            langArray.push({
+                default: (lang == "en_us") ? true : false,
+                code: lang,
+                name: nameArray.join(" "),
+                emoji: name.split(" ")[0],
+                nameWithEmoji: name
+            });
+        });
+        res.json({
+            success: true,
+            error: "",
+            data: { languages: langArray }
+        });
+    });
     let server = app.listen(process.env.API_PORT, process.env.API_IP, async () => {
         client.log.info("Express App started...", "I_EXPRESS");
     });

@@ -30,5 +30,6 @@ module.exports = {
                 }
             });
         });
-    }
+    },
+    languages: ["en_us", "de_de", "fr_fr"]
 }

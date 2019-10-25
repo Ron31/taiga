@@ -1,5 +1,5 @@
 const { RichEmbed } = require("discord.js");
-const langs = ["en_us", "de_de", "fr_fr"];
+const langs = require("../../utils/lang").languages;
 
 module.exports.run = async (cmd, client, args, message) => {
     if(args.length == 0) {
