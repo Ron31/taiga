@@ -15,5 +15,5 @@ module.exports.run = async (cmd, client, args, message) => {
 module.exports.help = {
     name: "taiga",
     description: "command.taiga.description",
-    usage: "command.taiga.usage"
+    usage: ""
 };

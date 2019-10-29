@@ -25,5 +25,5 @@ module.exports.run = async (cmd, client, args, message) => {
 module.exports.help = {
     name: "leaderboard",
     description: "command.leaderboard.description",
-    usage: "command.leaderboard.usage"
+    usage: ""
 };

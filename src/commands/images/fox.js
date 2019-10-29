@@ -15,5 +15,5 @@ module.exports.run = async (cmd, client, args, message) => {
 module.exports.help = {
     name: "fox",
     description: "command.fox.description",
-    usage: "command.fox.usage"
+    usage: ""
 };

@@ -22,5 +22,5 @@ module.exports.run = async (cmd, client, args, message) => {
 module.exports.help = {
     name: "monthly",
     description: "command.monthly.description",
-    usage: "command.monthly.usage"
+    usage: ""
 };
