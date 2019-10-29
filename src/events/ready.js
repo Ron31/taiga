@@ -52,6 +52,7 @@ module.exports = async (client) => {
     app.get("/getLanguages", async (req, res) => {
         let langs = require("../utils/lang").languages;
         let langArray = []
+        let originalStrings = Object.keys(require("../languages/en_us.json")).length;
         langs.forEach((lang) => {
             let name = require("../languages/" + lang + ".json")["command.language.name"];
             let nameArray = name.split(" ");
@@ -61,13 +62,66 @@ module.exports = async (client) => {
                 code: lang,
                 name: nameArray.join(" "),
                 emoji: name.split(" ")[0],
-                nameWithEmoji: name
+                nameWithEmoji: name,
+                amountFormatted: Math.round(originalStrings / Object.keys(require("../languages/" + lang + ".json")).length * 100) + "%",
+                amount: originalStrings / Object.keys(require("../languages/" + lang + ".json")).length * 100
             });
         });
         res.json({
             success: true,
             error: "",
             data: { languages: langArray }
+        });
+    });
+    app.get("/getStaff", async (req, res) => {
+        let ownerGuild = client.guilds.find(val => val.id == client.config.ownerGuild);
+        let members = ownerGuild.members;
+        let staffAray = [];
+        members.forEach((member) => {
+            let memberRoles = [];
+            member.roles.forEach((role) => {
+                if(client.config.staffRoles.includes(role.id)) {
+                    memberRoles.push(role);
+                }
+            });
+            if(memberRoles.length == 0) return;
+            let currentRole;
+            let currentPriority = 0;
+            let rolesArray = [];
+            memberRoles.forEach((role) => {
+                rolesArray.push({
+                    id: role.id,
+                    priority: role.position,
+                    color: role.color,
+                    hexColor: role.hexColor,
+                    name: role.name
+                });
+                if(role.position > currentPriority) {
+                    currentRole = role;
+                    currentPriority = role.position;
+                }
+            });
+            staffAray.push({
+                id: member.user.id,
+                username: member.user.username,
+                nickname: (member.nickname == null) ? member.user.username : member.nickname,
+                discriminator: member.user.discriminator,
+                avatar: member.user.avatarURL,
+                status: member.user.presence.status,
+                mainRole: {
+                    id: currentRole.id,
+                    priority: currentRole.position,
+                    color: currentRole.color,
+                    hexColor: currentRole.hexColor,
+                    name: currentRole.name
+                },
+                allRoles: rolesArray
+            });
+        });
+        res.json({
+            success: true,
+            error: "",
+            data: { staff: staffAray }
         });
     });
     let server = app.listen(process.env.API_PORT, process.env.API_IP, async () => {
