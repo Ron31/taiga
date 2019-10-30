@@ -4,7 +4,7 @@ module.exports = async (client) => {
     let activities = [{type: "LISTENING", text: "$prefixhelp"}, {type: "WATCHING", text: "Toradora!"}, {type: "WATCHING", text: "over $guilds Guilds"}, {type: "WATCHING", text: "over $users Users"}];
     setInterval(function() {
       let activity = activities[Math.floor(Math.random() * activities.length)];
-      client.user.setActivity(activity.text.replace("$prefix", client.config.prefix).replace("$guilds", client.numbers.numberWithCommas(client.guilds.size)).replace("$users", client.numbers.numberWithCommas(client.users.size)), { type: activity.type});
+      client.user.setActivity(activity.text.replace("$prefix", client.config.prefix).replace("$guilds", client.numberWithCommas(client.guilds.size)).replace("$users", client.numberWithCommas(client.users.size)), { type: activity.type});
     }, 12000);
 
     // Express

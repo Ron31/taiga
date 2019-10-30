@@ -1,16 +1,9 @@
-const { Client, Collection }  = require("discord.js");
-const client = new Client({disableEveryone: true});
 require('dotenv').config();
-client.numbers = require("./utils/numbers");
-client.log = require("./utils/logging");
-client.database = require("./utils/database");
-client.config = require("./config.json");
-client.commands = new Collection();
-client.groups = [];
-client.string = require("./utils/lang").string;
-
-client.economy = require("./utils/economy");
-client.dbutils = require("./utils/dbutils");
+const { Collection } = require("discord.js");
+const { TaigaClient } = require("./taiga");
+const client = new TaigaClient({disableEveryone: true});
+client.languages = ["en_us", "de_de", "fr_fr"];
+client.experimentalLanguages = ["da_dk", "lb_lu", "pt_br"];
 
 const fs = require("fs");
 
