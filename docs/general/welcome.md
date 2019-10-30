@@ -6,4 +6,4 @@ Taiga is a Discord Bot which allows users to earn currency, collect trading card
 
 ## Contribution Guidelines
 * **Gitmoji:** Always add an Emoji from [gitmoji](https://gitmoji.carloscuesta.me/), whose description fits your commit the best, in front of your commit message.
-* **Translation** Always add your string to `languages/en_us.json` and use the String Function inside of the client to get the string of the guild the command is run on.
+* **Translation** Always add your string to `languages/en_us.json` and use the [String Function](https://taiga.crugg.de/codedocs/#/docs/bot/master/class/TaigaClient?scrollTo=string) to get the string of the guild the command is run on.
