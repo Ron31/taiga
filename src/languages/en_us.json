@@ -11,13 +11,11 @@
     "command.language.title": "Language",
     "command.language.name": ":flag_us: American English",
     "command.language.error": "You haven't provided a valid language ID. Available languages are $langs.",
-    "command.language.experimental": "This language is unfinished and many texts will still appear english. Please use $command if you really want to choose this language.",
     "command.language.success": "Language sucessfully changed to $lang",
     "command.language.description": "Change the bot's language on this server",
     "command.language.usage": " [Language]",
     "command.neko.title": "Neko",
     "command.neko.footer": "⚡ by nekos.life",
-    "command.neko.disabled": "This command has been disabled. It will be replaced with a similar command in the future.",
     "command.neko.description": "Get a random SFW image of a neko",
     "command.fox.title": "Fox",
     "command.fox.footer": "⚡ by randomfox.ca",
@@ -100,11 +98,13 @@
     "command.osu.joinDate": "Join date",
     "command.osu.description": "Gets stats of a user in the game osu!",
     "command.osu.usage": " <Name> [[--exact]]",
+    "command.neko.disabled": "This command has been disabled. It will be replaced with a similar command in the future.",
     "command.truckersmp.title": "TruckersMP",
     "command.truckersmp.serversHeading": "$game Servers",
     "command.truckersmp.versionHeading": "Game version",
     "command.truckersmp.queue": "($amount in queue)",
     "command.truckersmp.truckersmpVersion": "TruckersMP Version",
     "command.truckersmp.gameVersion": "Supported Game Version $game",
-    "command.truckersmp.description": "Gives you information about the TruckersMP Network (Multiplayer modification for ETS2 and ATS)"
+    "command.truckersmp.description": "Gives you information about the TruckersMP Network (Multiplayer modification for ETS2 and ATS)",
+    "command.language.experimental": "This language is unfinished and many texts will still appear english. Please use $command if you really want to choose this language."
 }

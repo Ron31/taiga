@@ -105,5 +105,6 @@
     "command.truckersmp.queue": "($amount in Warteschlange)",
     "command.truckersmp.truckersmpVersion": "TruckersMP Version",
     "command.truckersmp.gameVersion": "Unterstütze Spielversion $game",
-    "command.truckersmp.description": "Gibt dir Informationen über das TruckersMP Netzwerk (Multiplayer Modifikation für ETS2 und ATS)"
+    "command.truckersmp.description": "Gibt dir Informationen über das TruckersMP Netzwerk (Multiplayer Modifikation für ETS2 und ATS)",
+    "command.language.experimental": "Diese Sprache ist unfertig und wird einige Texte beinhalten, welche noch auf Englisch angezeigt werden. Bitte verwende $command, falls du diese Sprache wirklich wählen möchtest."
 }
