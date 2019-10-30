@@ -106,5 +106,10 @@
     "command.truckersmp.queue": "($amount in queue)",
     "command.truckersmp.truckersmpVersion": "TruckersMP Version",
     "command.truckersmp.gameVersion": "Supported Game Version $game",
-    "command.truckersmp.description": "Gives you information about the TruckersMP Network (Multiplayer modification for ETS2 and ATS)"
+    "command.truckersmp.description": "Gives you information about the TruckersMP Network (Multiplayer modification for ETS2 and ATS)",
+    "tradingcards.rarity.common": "Common",
+    "tradingcards.rarity.uncommon": "Uncommon",
+    "tradingcards.rarity.rare": "Rare",
+    "tradingcards.rarity.exotic": "Exotic",
+    "tradingcards.rarity.ultimative": "Ultimative"
 }
