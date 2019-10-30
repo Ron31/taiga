@@ -1,0 +1,16 @@
+{
+    "general.error": "Et ass en Feeler opgetrieden: $error",
+    "command.help.title": "Hëllef",
+    "command.language.title": "Sproch",
+    "command.language.name": ":flag_lu: L\\u00ebtzebuergesch",
+    "command.language.error": "Du hues keen korrekten Sprochencode unginn. Dei Sprochen dei et ginn sinn $langs.",
+    "command.language.success": "Sproch erfollegreich ge\\u00e4nnert zu $lang",
+    "command.language.usage": " [Sproch]",
+    "command.neko.title": "Neko",
+    "command.neko.footer": "⚡ vun nekos.life",
+    "command.fox.title": "Fuuss",
+    "command.fox.footer": "⚡ vun randomfox.ca",
+    "command.taiga.title": "Taiga",
+    "command.taiga.footer": "⚡ vun toradorapi.crugg.de",
+    "command.about.description": "Infoen iwwert den Bot"
+}

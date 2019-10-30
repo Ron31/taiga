@@ -11,6 +11,7 @@
     "command.language.title": "Language",
     "command.language.name": ":flag_us: American English",
     "command.language.error": "You haven't provided a valid language ID. Available languages are $langs.",
+    "command.language.experimental": "This language is unfinished and many texts will still appear english. Please use $command if you really want to choose this language.",
     "command.language.success": "Language sucessfully changed to $lang",
     "command.language.description": "Change the bot's language on this server",
     "command.language.usage": " [Language]",

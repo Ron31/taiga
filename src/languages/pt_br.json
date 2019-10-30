@@ -1,0 +1,8 @@
+{
+    "general.error": "Ocorreu um erro: $error",
+    "general.userNotFound": "Esse usuário não foi encontrado",
+    "general.syntax": "Sintaxe incorreta. Por favor use $command",
+    "command.help.title": "Ajuda",
+    "command.help.error1": "Essa categoria não existe. Por favor use `$prefixhelp` para ver todas as categorias.",
+    "command.language.name": ":flag_br: Portugues do Brasil"
+}

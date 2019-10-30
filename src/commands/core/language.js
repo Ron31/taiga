@@ -1,5 +1,6 @@
 const { RichEmbed } = require("discord.js");
 const langs = require("../../utils/lang").languages;
+const experimentalLangs = require("../../utils/lang").experimentalLanguages;
 
 module.exports.run = async (cmd, client, args, message) => {
     if(args.length == 0) {
@@ -8,6 +9,21 @@ module.exports.run = async (cmd, client, args, message) => {
         if(message.member.hasPermission("ADMINISTRATOR")) {
             if(args.length == 1) {
                 if(langs.includes(args[0])) {
+                    updateLanguage(args[0]);
+                } else if(experimentalLangs.includes(args[0])) {
+                    let embed = new RichEmbed()
+                        .setTitle(client.config.title + " - " + await client.string(message.guild, "command.language.title"))
+                        .setDescription((await client.string(message.guild, "command.language.experimental")).replace("$command", "`" + client.config.prefix + this.help.name + " " + args[0] + " --experimental" + "`"))
+                        .setColor(client.config.color)
+                        .setFooter(client.config.title + " ● " + (await client.string(message.guild, "general.footer")).replace("$user", message.author.tag));
+                    message.channel.send(embed);
+                } else {
+                    displayError();
+                }
+            } else if(args.length == 2 && args[1] == "--experimental") {
+                if(langs.includes(args[0])) {
+                    updateLanguage(args[0]);
+                } else if(experimentalLangs.includes(args[0])) {
                     updateLanguage(args[0]);
                 } else {
                     displayError();
@@ -29,7 +45,7 @@ module.exports.run = async (cmd, client, args, message) => {
         message.channel.send(embed);
     }
     async function displayError() {
-        let langString = langs.join(", ")
+        let langString =  [...langs, ...experimentalLangs].join(", ")
         let embed = new RichEmbed()
             .setTitle(client.config.title + " - " + await client.string(message.guild, "command.language.title"))
             .setDescription((await client.string(message.guild, "command.language.error")).replace("$langs", "`" + langString + "`"))
@@ -48,7 +64,7 @@ module.exports.run = async (cmd, client, args, message) => {
                     .setFooter(client.config.title + " ● " + (await client.string(message.guild, "general.footer")).replace("$user", message.author.tag));
                 message.channel.send(embed);
             } else {
-                if(!results) client.database.query("INSERT INTO `guilds_settings`(`guild`, `language`, `music`) VALUES ('?','en_us',0)", [message.guild.id]);
+                if(!results) client.database.query("INSERT INTO `guilds_settings`(`guild`, `language`, `music`) VALUES ('?','?',0)", [message.guild.id, langId]);
                 let embed = new RichEmbed()
                     .setTitle(client.config.title + " - " + await client.string(message.guild, "command.language.title"))
                     .setDescription((await client.string(message.guild, "command.language.success")).replace("$lang", "`" + langId + "`"))

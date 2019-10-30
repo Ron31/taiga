@@ -51,7 +51,9 @@ module.exports = async (client) => {
     });
     app.get("/getLanguages", async (req, res) => {
         let langs = require("../utils/lang").languages;
-        let langArray = []
+        let langArray = [];
+        let expLangs = require("../utils/lang").experimentalLanguages;
+        let expLangArray = [];
         let originalStrings = Object.keys(require("../languages/en_us.json")).length;
         langs.forEach((lang) => {
             let name = require("../languages/" + lang + ".json")["command.language.name"];
@@ -63,14 +65,28 @@ module.exports = async (client) => {
                 name: nameArray.join(" "),
                 emoji: name.split(" ")[0],
                 nameWithEmoji: name,
-                amountFormatted: Math.round(originalStrings / Object.keys(require("../languages/" + lang + ".json")).length * 100) + "%",
-                amount: originalStrings / Object.keys(require("../languages/" + lang + ".json")).length * 100
+                amountFormatted: Math.round((Object.keys(require("../languages/" + lang + ".json")).length / originalStrings) * 100) + "%",
+                amount: (Object.keys(require("../languages/" + lang + ".json")).length / originalStrings) * 100
+            });
+        });
+        expLangs.forEach((lang) => {
+            let name = require("../languages/" + lang + ".json")["command.language.name"];
+            let nameArray = name.split(" ");
+            nameArray.splice(0, 1);
+            expLangArray.push({
+                default: (lang == "en_us") ? true : false,
+                code: lang,
+                name: nameArray.join(" "),
+                emoji: name.split(" ")[0],
+                nameWithEmoji: name,
+                amountFormatted: Math.round(( Object.keys(require("../languages/" + lang + ".json")).length / originalStrings) * 100) + "%",
+                amount: (Object.keys(require("../languages/" + lang + ".json")).length / originalStrings) * 100
             });
         });
         res.json({
             success: true,
             error: "",
-            data: { languages: langArray }
+            data: { languages: langArray, experimentalLanguages: expLangArray }
         });
     });
     app.get("/getStaff", async (req, res) => {
