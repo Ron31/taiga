@@ -197,10 +197,11 @@ class EconomyUtility {
     daily(user) {
         return new Promise((resolve, reject) => {
             this.connection.query("SELECT * FROM users_cooldowns WHERE user = ? LIMIT 1", [user.id], async(err, results) => {
+                console.log(results);
                 if(!results[0]) {
                     let oldDate = new Date('2017-01-01T00:00:00');
                     let currentDate = new Date();
-                    this.connection.query("INSERT INTO `users_cooldowns`(user, hourlyLast, dailyLast, weeklyLast, monthlyLast) VALUES (?, ?, ?, ?)", [user.id, oldDate, currentDate, oldDate, oldDate]);
+                    this.connection.query("INSERT INTO `users_cooldowns`(user, hourlyLast, dailyLast, weeklyLast, monthlyLast) VALUES (?, ?, ?, ?, ?)", [user.id, oldDate, currentDate, oldDate, oldDate]);
                     this.addCoins(user, 100);
                     resolve(true);
                 } else {
@@ -221,13 +222,13 @@ class EconomyUtility {
      * @param {User} user The user which should recieve the weekly reward
      * @return {Promise<?boolean>}
      */
-    weekly() {
+    weekly(user) {
         return new Promise((resolve, reject) => {
             this.connection.query("SELECT * FROM users_cooldowns WHERE user = ? LIMIT 1", [user.id], async(err, results) => {
                 if(!results[0]) {
                     let oldDate = new Date('2017-01-01T00:00:00');
                     let currentDate = new Date();
-                    this.connection.query("INSERT INTO `users_cooldowns`(user, hourlyLast, dailyLast, weeklyLast, monthlyLast) VALUES (?, ?, ?, ?)", [user.id, oldDate, oldDate, currentDate, oldDate]);
+                    this.connection.query("INSERT INTO `users_cooldowns`(user, hourlyLast, dailyLast, weeklyLast, monthlyLast) VALUES (?, ?, ?, ?, ?)", [user.id, oldDate, oldDate, currentDate, oldDate]);
                     this.addCoins(user, 250);
                     resolve(true);
                 } else {
@@ -249,13 +250,13 @@ class EconomyUtility {
      * @param {User} user The user which should recieve the monthly reward
      * @return {Promise<?boolean>}
      */
-    monthly() {
+    monthly(user) {
         return new Promise((resolve, reject) => {
             this.connection.query("SELECT * FROM users_cooldowns WHERE user = ? LIMIT 1", [user.id], async(err, results) => {
                 if(!results[0]) {
                     let oldDate = new Date('2017-01-01T00:00:00');
                     let currentDate = new Date();
-                    this.connection.query("INSERT INTO `users_cooldowns`(user, hourlyLast, dailyLast, weeklyLast, monthlyLast) VALUES (?, ?, ?, ?)", [user.id, oldDate, oldDate, oldDate, currentDate]);
+                    this.connection.query("INSERT INTO `users_cooldowns`(user, hourlyLast, dailyLast, weeklyLast, monthlyLast) VALUES (?, ?, ?, ?, ?)", [user.id, oldDate, oldDate, oldDate, currentDate]);
                     this.addCoins(user, 750);
                     resolve(true);
                 } else {
