@@ -79,11 +79,11 @@ class TaigaClient extends Client {
     string(guild, string) {
         return new Promise(function(resolve, reject) {
             database.query("SELECT * FROM `guilds_settings` WHERE `guild` = ?", [guild.id], (err, results) => {
-                if (!results[0]) {
+                if(!results[0]) {
                     let lang = "en_us";
                     database.query("INSERT INTO `guilds_settings`(`guild`, `language`, `music`) VALUES (?,?,?)", [guild.id, lang, false]);
                     let langFile = require("./languages/" + lang + ".json");
-                    if (!langFile[string]) {
+                    if(!langFile[string]) {
                         resolve("[String not found: " + string + "]");
                     } else {
                         resolve(langFile[string]);
@@ -91,12 +91,12 @@ class TaigaClient extends Client {
                 } else {
                     let lang = results[0].language;
                     let langFile = require("./languages/" + lang + ".json");
-                    if (langFile[string]) {
+                    if(langFile[string]) {
                         resolve(langFile[string]);
                     } else {
                         lang = "en_us";
                         langFile = require("./languages/" + lang + ".json");
-                        if (langFile[string]) {
+                        if(langFile[string]) {
                             resolve(langFile[string]);
                         } else {
                             resolve("[String not found: " + string + "]");
@@ -126,7 +126,7 @@ class EconomyUtility {
     addCoins(user, amount) {
         return new Promise(function(resolve, reject) {
             this.connection.query("SELECT * FROM users_money WHERE user = ? LIMIT 1", [user.id], async(err, results) => {
-                if (!results[0]) {
+                if(!results[0]) {
                     this.connection.query("INSERT INTO `users_money`(`user`, `taigacoins`, `economyban`) VALUES (?,?,0)", [user.id, amount]);
                     resolve(true);
                 } else {
@@ -140,14 +140,14 @@ class EconomyUtility {
 
     /**
      * Remove coins from the specified user
-     * @param {User} user The user which should loose the coins
+     * @param {User} user The user which should lose the coins
      * @param {?number} amount The amount of coins
      * @return {Promise<?boolean>}
      */
     removeCoins(user, amount) {
         return new Promise(function(resolve, reject) {
             this.connection.query("SELECT * FROM users_money WHERE user = ? LIMIT 1", [user.id], async(err, results) => {
-                if (!results[0]) {
+                if(!results[0]) {
                     this.connection.query("INSERT INTO `users_money`(`user`, `taigacoins`, `economyban`) VALUES (?,?,0)", [user.id, -amount]);
                     resolve(true);
                 } else {
@@ -161,13 +161,13 @@ class EconomyUtility {
 
     /**
      * Get coins of the specified user
-     * @param {User} user The user which should loose the coins
+     * @param {User} user The user with the coins you will get
      * @return {Promise<?number>}
      */
     getCoins(user) {
         return new Promise(function(resolve, reject) {
             this.connection.query("SELECT * FROM users_money WHERE user = ? LIMIT 1", [user.id], async(err, results) => {
-                if (!results[0]) {
+                if(!results[0]) {
                     this.connection.query("INSERT INTO `users_money`(`user`, `taigacoins`, `economyban`) VALUES (?,0,0)", [user.id]);
                     resolve(0);
                 } else {
@@ -194,17 +194,17 @@ class EconomyUtility {
      * @param {User} user The user which should recieve the daily reward
      * @return {Promise<?boolean>}
      */
-    daily() {
+    daily(user) {
         return new Promise((resolve, reject) => {
             this.connection.query("SELECT * FROM users_cooldowns WHERE user = ? LIMIT 1", [user.id], async(err, results) => {
-                if (!results[0]) {
+                if(!results[0]) {
                     let oldDate = new Date('2017-01-01T00:00:00');
                     let currentDate = new Date();
                     this.connection.query("INSERT INTO `users_cooldowns`(user, hourlyLast, dailyLast, weeklyLast, monthlyLast) VALUES (?, ?, ?, ?)", [user.id, oldDate, currentDate, oldDate, oldDate]);
                     this.addCoins(user, 100);
                     resolve(true);
                 } else {
-                    if ((new Date() - results[0].dailyLast) >= 86400000) {
+                    if((new Date() - results[0].dailyLast) >= 86400000) {
                         this.connection.query("UPDATE users_cooldowns SET dailyLast = ? WHERE user = ?", [new Date(), user.id]);
                         this.addCoins(user, 100);
                         resolve(true);
@@ -224,14 +224,14 @@ class EconomyUtility {
     weekly() {
         return new Promise((resolve, reject) => {
             this.connection.query("SELECT * FROM users_cooldowns WHERE user = ? LIMIT 1", [user.id], async(err, results) => {
-                if (!results[0]) {
+                if(!results[0]) {
                     let oldDate = new Date('2017-01-01T00:00:00');
                     let currentDate = new Date();
                     this.connection.query("INSERT INTO `users_cooldowns`(user, hourlyLast, dailyLast, weeklyLast, monthlyLast) VALUES (?, ?, ?, ?)", [user.id, oldDate, oldDate, currentDate, oldDate]);
                     this.addCoins(user, 250);
                     resolve(true);
                 } else {
-                    if ((new Date() - results[0].weeklyLast) >= 604800000) {
+                    if((new Date() - results[0].weeklyLast) >= 604800000) {
                         this.connection.query("UPDATE users_cooldowns SET weeklyLast = ? WHERE user = ?", [new Date(), user.id]);
                         this.addCoins(user, 250);
                         resolve(true);
@@ -252,14 +252,14 @@ class EconomyUtility {
     monthly() {
         return new Promise((resolve, reject) => {
             this.connection.query("SELECT * FROM users_cooldowns WHERE user = ? LIMIT 1", [user.id], async(err, results) => {
-                if (!results[0]) {
+                if(!results[0]) {
                     let oldDate = new Date('2017-01-01T00:00:00');
                     let currentDate = new Date();
                     this.connection.query("INSERT INTO `users_cooldowns`(user, hourlyLast, dailyLast, weeklyLast, monthlyLast) VALUES (?, ?, ?, ?)", [user.id, oldDate, oldDate, oldDate, currentDate]);
                     this.addCoins(user, 750);
                     resolve(true);
                 } else {
-                    if ((new Date() - results[0].monthlyLast) >= 2592000000) {
+                    if((new Date() - results[0].monthlyLast) >= 2592000000) {
                         this.connection.query("UPDATE users_cooldowns SET monthlyLast = ? WHERE user = ?", [new Date(), user.id]);
                         this.addCoins(user, 750);
                         resolve(true);
@@ -306,7 +306,7 @@ class TradingCard {
     static validateId(id) {
         return new Promise((resolve, reject) => {
             database.query("SELECT * FROM tc_cards WHERE id = ? LIMIT 1", [id], async(error, results) => {
-                if (!results.length == 0) {
+                if(!results.length == 0) {
                     resolve(true);
                 } else {
                     resolve(false);
@@ -387,7 +387,7 @@ class TradingCard {
                 let description = (results.length != 0) ? results[0].description : "Invalid Trading Card";
                 let stringName = (results.length != 0) ? "tradingcards.rarity." + this.internalName : "tradingcards.rarity.invalid";
                 let rarity = await module.exports.Rarity.init(0);
-                if (await module.exports.Rarity.validateId((results.length != 0) ? results[0].rarity : 0)) {
+                if(await module.exports.Rarity.validateId((results.length != 0) ? results[0].rarity : 0)) {
                     rarity = await module.exports.Rarity.init(results[0].rarity);
                 }
                 resolve(new module.exports.TradingCard(id, internalName, displayName, imageName, owners, maxOwners, description, stringName, rarity));
@@ -411,7 +411,7 @@ class Rarity {
     static validateId(id) {
         return new Promise((resolve, reject) => {
             database.query("SELECT * FROM tc_rarities WHERE id = ? LIMIT 1", [id], async(error, results) => {
-                if (!results.length == 0) {
+                if(!results.length == 0) {
                     resolve(true);
                 } else {
                     resolve(false);
@@ -480,7 +480,7 @@ class Chance {
      * @param {?number} value The chance value
      */
     constructor(value) {
-        if (!value > 100) {
+        if(!value > 100) {
             this.chance = value;
         } else {
             this.chance = 100;
