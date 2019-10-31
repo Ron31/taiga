@@ -197,7 +197,6 @@ class EconomyUtility {
     daily(user) {
         return new Promise((resolve, reject) => {
             this.connection.query("SELECT * FROM users_cooldowns WHERE user = ? LIMIT 1", [user.id], async(err, results) => {
-                console.log(results);
                 if(!results[0]) {
                     let oldDate = new Date('2017-01-01T00:00:00');
                     let currentDate = new Date();
