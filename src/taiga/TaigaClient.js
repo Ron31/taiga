@@ -8,7 +8,7 @@ const EconomyUtility = require("./EconomyUtility");
 /**
  * The main Client which is based on discord.js's Client.
  */
-module.exports = class extends Client {
+class TaigaClient extends Client {
     constructor(options = {}) {
         super(options);
 
@@ -107,3 +107,5 @@ module.exports = class extends Client {
         });
     }
 }
+
+module.exports = TaigaClient;

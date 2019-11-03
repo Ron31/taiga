@@ -73,3 +73,5 @@ class Rarity {
         })
     }
 }
+
+module.exports = Rarity;

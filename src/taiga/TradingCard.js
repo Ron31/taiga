@@ -102,3 +102,5 @@ class TradingCard {
         });
     }
 }
+
+module.exports = TradingCard;

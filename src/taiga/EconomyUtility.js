@@ -4,7 +4,7 @@ const db = require("../utils/database");
 /**
  * Class for Economy Utilities. This should only be used inside the TaigaClient Class.
  */
-module.exports = class {
+class EconomyUtility {
     constructor() {
         this.timeouts = new Set();
     }
@@ -182,3 +182,5 @@ module.exports = class {
         return this.timeouts.has(user.id)
     }
 }
+
+module.exports = EconomyUtility;
