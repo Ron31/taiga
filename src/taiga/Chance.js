@@ -6,7 +6,7 @@ class Chance {
      * @param {?number} value The chance value
      */
     constructor(value) {
-        if(!value > 100) {
+        if(value <= 100) {
             this.chance = value;
         } else {
             this.chance = 100;

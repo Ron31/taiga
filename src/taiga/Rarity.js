@@ -1,3 +1,6 @@
+const database = require("../utils/database");
+const Chance = require("./Chance");
+
 /**
  * A Rarity for Trading Cards
  */
@@ -22,7 +25,7 @@ class Rarity {
         });
     }
 
-    constructor(id, internalName, backgroundFile, priority, chance) {
+    constructor(id, internalName, backgroundFile, priority, chance, stringName) {
         /**
          * The ID of the Rarity
          * @type {?number}
@@ -52,6 +55,12 @@ class Rarity {
          * @type {Chance}
          */
         this.chance = chance;
+
+        /**
+         * The string of for the Rarity's display name
+         * @type {?string}
+         */
+        this.stringName = stringName;
     }
 
     /**
@@ -65,10 +74,11 @@ class Rarity {
             database.query("SELECT * FROM tc_rarities WHERE id = ? LIMIT 1", [id], async(error, results) => {
                 let id = (results.length != 0) ? results[0].id : 0;
                 let internalName = (results.length != 0) ? results[0].internalName : "invalid";
-                let backgroundFile = (results.length != 0) ? "bg_" + this.internalName + ".png" : "bg_common.png";
+                let backgroundFile = (results.length != 0) ? "bg_" + internalName + ".png" : "bg_common.png";
                 let priority = (results.length != 0) ? results[0].priority : 0;
-                let chance = (results.length != 0) ? new module.exports.Chance(results[0].chance) : new module.exports.Chance(0);
-                resolve(new module.exports.Rarity(id, internalName, backgroundFile, priority, chance));
+                let chance = (results.length != 0) ? new Chance(results[0].chance) : new Chance(0);
+                let stringName = (results.length != 0) ? "tradingcards.rarity." + internalName : "tradingcards.rarity.invalid";
+                resolve(new Rarity(id, internalName, backgroundFile, priority, chance, stringName));
             });
         })
     }

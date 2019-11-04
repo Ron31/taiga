@@ -3,6 +3,7 @@
     "general.footer": "Command requested by $user",
     "general.userNotFound": "The User wasn't found",
     "general.syntax": "Wrong Syntax. Please use $command",
+    "general.featureTesting": "This feature is still unfinished and is currently only available to testers. Contact CRUGG#0001 for more information.",
     "command.help.title": "Help",
     "command.help.error1": "This category doesn't exist. Please use `$prefixhelp` to view all categories.",
     "command.help.error2": "You have entered too many Arguments. Please either just run `$prefixhelp` or specifiy a category after it.",
@@ -106,5 +107,15 @@
     "command.truckersmp.truckersmpVersion": "TruckersMP Version",
     "command.truckersmp.gameVersion": "Supported Game Version $game",
     "command.truckersmp.description": "Gives you information about the TruckersMP Network (Multiplayer modification for ETS2 and ATS)",
-    "command.language.experimental": "This language is unfinished and many texts will still appear english. Please use $command if you really want to choose this language."
+    "command.language.experimental": "This language is unfinished and many texts will still appear english. Please use $command if you really want to choose this language.",
+    "command.cards.title": "My trading cards",
+    "command.cards.descriptionText": "Here are all trading cards you own. To view a specific one, use $command",
+    "command.cards.subtitle": "Trading cards",
+    "command.cards.description": "Shows all the trading cards you own",
+    "tradingcards.rarity.invalid": "Invalid",
+    "tradingcards.rarity.common": "Common",
+    "tradingcards.rarity.uncommon": "Uncommon",
+    "tradingcards.rarity.rare": "Rare",
+    "tradingcards.rarity.exotic": "Exotic",
+    "tradingcards.rarity.ultimative": "Ultimative"
 }
