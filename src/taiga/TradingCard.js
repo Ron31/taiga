@@ -164,7 +164,7 @@ class TradingCard {
 
     /**
      * This gives a random card, with chances in mind
-     * @return {Promise<TradingCard}
+     * @return {Promise<TradingCard>}
      * @static
      */
     static async randomCard(id) {
