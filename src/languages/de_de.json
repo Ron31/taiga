@@ -106,5 +106,16 @@
     "command.truckersmp.truckersmpVersion": "TruckersMP Version",
     "command.truckersmp.gameVersion": "Unterstütze Spielversion $game",
     "command.truckersmp.description": "Gibt dir Informationen über das TruckersMP Netzwerk (Multiplayer Modifikation für ETS2 und ATS)",
-    "command.language.experimental": "Diese Sprache ist unfertig und wird einige Texte beinhalten, welche noch auf Englisch angezeigt werden. Bitte verwende $command, falls du diese Sprache wirklich wählen möchtest."
+    "command.language.experimental": "Diese Sprache ist unfertig und wird einige Texte beinhalten, welche noch auf Englisch angezeigt werden. Bitte verwende $command, falls du diese Sprache wirklich wählen möchtest.",
+    "general.featureTesting": "Diese Funktion ist noch unfertig und ist daher momentan nur für Tester verfügbar. Kontaktiere CRUGG#0001 für weitere Informationen.",
+    "command.cards.title": "Meine Sammelkarten",
+    "command.cards.descriptionText": "Hier sind alle Sammelkarten die du besitzt. Verwende $command, um dir eine bestimmte Sammelkarte anzusehen",
+    "command.cards.subtitle": "Sammelkarten",
+    "command.cards.description": "Zeigt deine Sammelkarten",
+    "tradingcards.rarity.invalid": "Ungültig",
+    "tradingcards.rarity.common": "Gewöhnlich",
+    "tradingcards.rarity.uncommon": "Ungewöhnlich",
+    "tradingcards.rarity.rare": "Selten",
+    "tradingcards.rarity.exotic": "Exotisch",
+    "tradingcards.rarity.ultimative": "Ultimativ"
 }
