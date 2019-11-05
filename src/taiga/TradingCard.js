@@ -182,8 +182,10 @@ class TradingCard {
                         randomRarities.add(cRarity);
                     }
                 });
-                let randomChance = randomRarities.array()[Math.floor(Math.random() * randomRarities.array().length)];
-                resolve(randomChance);
+                let randomRarity = randomRarities.array()[Math.floor(Math.random() * randomRarities.array().length)];
+                database.query("SELECT * FROM tc_cards WHERE rarity = ?", [randomRarity.id], async(error, results) => {
+                    resolve(await TradingCard.init(results[Math.floor(Math.random() * results.length)].id));
+                })
             });
         });
     }
@@ -193,7 +195,7 @@ class TradingCard {
      */
     async getImage(guild) {
         return new Promise(async (resolve, reject) => {
-            registerFont("../fonts/Exo2-Black.ttf", { family: "Exo 2" } )
+            registerFont("../fonts/Exo2-Black.ttf", { family: "Exo 2" });
             let canvas = createCanvas(800, 1160);
             let ctx = canvas.getContext("2d");
             let cardImage = await loadImage("http://nossl.cdn.crugg.de/taiga/tradingcards/cards/" + this.imageName);
