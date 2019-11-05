@@ -1,3 +1,5 @@
+const { TradingCard } = require("../taiga");
+
 module.exports = async (client) => {
     client.log.info("The bot has sucessfully started", "E_READY");
     client.user.setStatus("online");
@@ -48,6 +50,31 @@ module.exports = async (client) => {
             error: "Endpoint in development. Not functional yet.",
             data: {}
         })
+    });
+    app.get("/tradingcards/:cardId/card", async (req, res) => {
+        if(!(/^\d+$/.test(req.params.cardId))) return res.json({sucess: false, error: "Non-numeric card id requested"});
+        if(!await TradingCard.validateId(req.params.cardId)) return res.json({sucess: false, error: "Non-existant card id requested"});
+        let card = await TradingCard.init(req.params.cardId);
+        res.json({
+            success: true,
+            error: "",
+            data: {
+                imageUrl: req.protocol + '://' + req.get('Host') + req.url + ".png",
+                name: card.internalName,
+                displayName: card.displayName
+            }
+        });
+    });
+    app.get("/tradingcards/:cardId/card.png", async (req, res) => {
+        let card;
+        if(!(/^\d+$/.test(req.params.cardId))) {
+            card = await TradingCard.init(0);
+        } else {
+            card = await TradingCard.init(parseInt(req.params.cardId));
+        }
+        res.setHeader("Content-Type", "image/png");
+        res.write(await card.getImage(client.guilds.find(val => val.id == client.config.ownerGuild)));
+        res.end();
     });
     app.get("/getLanguages", async (req, res) => {
         let langs = require("../utils/lang").languages;
