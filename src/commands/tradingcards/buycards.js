@@ -1,7 +1,17 @@
 const { RichEmbed, WebhookClient } = require("discord.js");
 const { Inventory, TradingCard } = require("../../taiga");
 
+let inBuy = new Set();
+
 module.exports.run = async (cmd, client, args, message) => {
+    if(inBuy.has(message.author.id)) {
+        let openingEmbed = new RichEmbed()
+        .setColor(client.config.color)
+        .setTitle(client.config.title + " - " + await client.string(message.guild, "command.buycards.title"))
+        .setDescription(await client.string(message.guild, "command.buycards.cooldown"))
+        .setFooter(client.config.title + " ● " + (await client.string(message.guild, "general.footer")).replace("$user", message.author.tag));
+        return message.channel.send(openingEmbed);
+    }
     let price = 299;
     let embed = new RichEmbed()
     .setColor(client.config.color)
@@ -14,6 +24,7 @@ module.exports.run = async (cmd, client, args, message) => {
     collector.on("collect", async (r) => {
         let inventory = await Inventory.init(message.author);
         reply.delete();
+        inBuy.add(message.author.id);
         reaction.remove();
         clearTimeout(timeout);
         // client.economy.removeCoins(message.author, price);
@@ -53,6 +64,7 @@ module.exports.run = async (cmd, client, args, message) => {
                     .setFooter(client.config.title + " ● " + (await client.string(message.guild, "general.footer")).replace("$user", message.author.tag));
                     message3.edit(cardEmbed3);
                     await inventory.add(randomCards[2]);
+                    inBuy.delete(message.author.id)
                 }, 5000);
             }, 5000);
         }, 5000);

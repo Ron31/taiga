@@ -119,6 +119,7 @@
     "command.buycards.opening": "Opening...",
     "command.buycards.confirmation": "You are about to buy a pack of $amount trading cards for $price.\nPlease react with $emoji within 1 minute to confirm the purchase.",
     "command.buycards.description": "Buy a pack of trading cards",
+    "command.buycards.cooldown": "You have already opened a pack of trading cards. Please wait for it to finished before opening a new one.",
     "tradingcards.rarity.invalid": "Invalid",
     "tradingcards.rarity.common": "Common",
     "tradingcards.rarity.uncommon": "Uncommon",
