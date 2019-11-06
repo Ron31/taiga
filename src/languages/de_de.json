@@ -117,5 +117,11 @@
     "tradingcards.rarity.uncommon": "Ungewöhnlich",
     "tradingcards.rarity.rare": "Selten",
     "tradingcards.rarity.exotic": "Exotisch",
-    "tradingcards.rarity.ultimative": "Ultimativ"
+    "tradingcards.rarity.ultimative": "Ultimativ",
+    "command.viewcard.title": "Karte ansehen",
+    "command.viewcard.description": "Schaue dir eine deiner Sammelkarten an",
+    "command.viewcard.usage": " <ID>",
+    "command.buycards.title": "Sammelkarten kaufen",
+    "command.buycards.confirmation": "Du bist gerade dabei, dir $amount Sammelkarten für $price zu kaufen. Bitte reagiere mit $emoji innerhalb von einer Minute, um den Kauf zu bestätigen",
+    "command.buycards.description": "Kaufe ein Paket Sammelkarten"
 }
