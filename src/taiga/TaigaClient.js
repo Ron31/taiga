@@ -106,6 +106,44 @@ class TaigaClient extends Client {
             });
         });
     }
+
+    /**
+     * Gets a string in the language of the specified guild.
+     * @param {Guild} guild The Guild that should be used for the language
+     * @param {?string} string The name of the String
+     * @return {Promise<?string>}
+     * @static
+     */
+    static string(guild, string) {
+        return new Promise(function(resolve, reject) {
+            db.query("SELECT * FROM `guilds_settings` WHERE `guild` = ?", [guild.id], (err, results) => {
+                if(!results[0]) {
+                    let lang = "en_us";
+                    db.query("INSERT INTO `guilds_settings`(`guild`, `language`, `music`) VALUES (?,?,?)", [guild.id, lang, false]);
+                    let langFile = require("../languages/" + lang + ".json");
+                    if(!langFile[string]) {
+                        resolve("[String not found: " + string + "]");
+                    } else {
+                        resolve(langFile[string]);
+                    }
+                } else {
+                    let lang = results[0].language;
+                    let langFile = require("../languages/" + lang + ".json");
+                    if(langFile[string]) {
+                        resolve(langFile[string]);
+                    } else {
+                        lang = "en_us";
+                        langFile = require("../languages/" + lang + ".json");
+                        if(langFile[string]) {
+                            resolve(langFile[string]);
+                        } else {
+                            resolve("[String not found: " + string + "]");
+                        }
+                    }
+                }
+            });
+        });
+    }
 }
 
 module.exports = TaigaClient;

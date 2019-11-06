@@ -1,5 +1,6 @@
-const { User } = require("discord.js");
+const { User, WebhookClient } = require("discord.js");
 const TradingCard = require("./TradingCard");
+const TaigaClient = require("./TaigaClient");
 const database = require("../utils/database");
 
 /**
@@ -47,8 +48,13 @@ class Inventory {
      */
     async add(card) {
         return new Promise((resolve, reject) => {
-            database.query("INSERT INTO tc_inventory (user, card) VALUES (?, ?)", [this.user.id. card.id], async(error) => {
+            database.query("INSERT INTO tc_inventory (user, card) VALUES (?, ?)", [this.user.id, card.id], async(error) => {
                 if(error) throw error;
+                if(card.rarity.id >= 3) {
+                    let webhook = new WebhookClient(process.env.CARD_FEED_WEBHOOK.split("/")[5], process.env.CARD_FEED_WEBHOOK.split("/")[6]);
+                    webhook.send("`" + this.user.tag + "` has received a `" + require("../languages/en_us.json")[card.rarity.stringName] + "` trading card: `" + card.displayName + "`");
+                    webhook.destroy();
+                }
                 this.tradingCards.push(card);
                 resolve(true);
             });

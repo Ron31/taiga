@@ -9,9 +9,10 @@ module.exports.run = async (cmd, client, args, message) => {
         if(i + 1 == tradingCards.length) {
             let embed = new RichEmbed()
             .setColor(client.config.color)
-            .setTitle(client.config.title + " - " + await client.string(message.guild, "commands.cards.title"))
+            .setTitle(client.config.title + " - " + await client.string(message.guild, "command.cards.title"))
             .setDescription((await client.string(message.guild, "command.cards.descriptionText")).replace("$command", "`" + client.config.prefix + "viewcard" + (await client.string(message.guild, "command.viewcard.usage")) + "`"))
-            .addField(await client.string(message.guild, "command.cards.subtitle"), tradingCardNames.join("\n"));
+            .addField(await client.string(message.guild, "command.cards.subtitle"), tradingCardNames.join("\n"))
+            .setFooter(client.config.title + " ● " + (await client.string(message.guild, "general.footer")).replace("$user", message.author.tag));
             return message.channel.send(embed);
         }
     });

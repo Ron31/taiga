@@ -7,13 +7,17 @@ module.exports.run = async (cmd, client, args, message) => {
         if(parseInt(args[0]) > userInventory.tradingCards.length || parseInt(args[0]) <= 0) {
             let embed = new RichEmbed()
             .setTitle(client.config.title + " - " + await client.string(message.guild, "command.viewcard.title"))
-            .setDescription((await client.string(message.guild, "command.viewcard.cardNotFound.")).replace("$command", client.config.prefix + "cards"))
+            .setDescription((await client.string(message.guild, "command.viewcard.cardNotFound")).replace("$command", client.config.prefix + "cards"))
             .setColor(client.config.color)
             .setFooter(client.config.title + " ● " + (await client.string(message.guild, "general.footer")).replace("$user", message.author.tag));
             return message.channel.send(embed);
         }
-        let attachment = await new Attachment(await userInventory.tradingCards[args[0] - 1].getImage(message.guild), "tc.png");
-        message.channel.send(attachment);
+        let embed = new RichEmbed()
+        .setTitle(client.config.title + " - " + await client.string(message.guild, "command.viewcard.title"))
+        .setImage("http://crugg.de:7362/tradingcards/" + userInventory.tradingCards[args[0] - 1].id + "/card.png")
+        .setColor(client.config.color)
+        .setFooter(client.config.title + " ● " + (await client.string(message.guild, "general.footer")).replace("$user", message.author.tag));
+        return message.channel.send(embed);
     } else {
         let embed = new RichEmbed()
         .setTitle(client.config.title + " - " + await client.string(message.guild, "command.viewcard.title"))

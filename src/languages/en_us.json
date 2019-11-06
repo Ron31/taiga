@@ -116,6 +116,7 @@
     "command.viewcard.description": "View one of your trading cards",
     "command.viewcard.usage": " <ID>",
     "command.buycards.title": "Buy trading cards",
+    "command.buycards.opening": "Opening...",
     "command.buycards.confirmation": "You are about to buy a pack of $amount trading cards for $price.\nPlease react with $emoji within 1 minute to confirm the purchase.",
     "command.buycards.description": "Buy a pack of trading cards",
     "tradingcards.rarity.invalid": "Invalid",

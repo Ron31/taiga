@@ -167,7 +167,7 @@ class TradingCard {
      * @return {Promise<TradingCard>}
      * @static
      */
-    static async randomCard(id) {
+    static async randomCard() {
         return new Promise((resolve, reject) => {
             let rarities = new Rarities();
             database.query("SELECT * FROM tc_rarities", [], async(error, results) => {
@@ -177,7 +177,6 @@ class TradingCard {
                 let randomRarities = new Rarities();
                 rarities.array().forEach((cRarity) => {
                     let amount = cRarity.chance.chance * 100;
-                    console.log(amount);
                     for(let i = 0; i < amount; i++) {
                         randomRarities.add(cRarity);
                     }
