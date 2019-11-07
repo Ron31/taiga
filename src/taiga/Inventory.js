@@ -56,6 +56,7 @@ class Inventory {
                     webhook.destroy();
                 }
                 this.tradingCards.push(card);
+                TradingCard.increaseOwner(card);
                 resolve(true);
             });
         });

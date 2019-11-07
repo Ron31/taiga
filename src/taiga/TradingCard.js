@@ -163,11 +163,11 @@ class TradingCard {
     }
 
     /**
-     * This gives a random card, with chances in mind
-     * @return {Promise<TradingCard>}
+     * Generate a rarity for a randomCard
+     * @return {?number} rarity
      * @static
      */
-    static async randomCard() {
+    static async genRarity() {
         return new Promise((resolve, reject) => {
             let rarities = new Rarities();
             database.query("SELECT * FROM tc_rarities", [], async(error, results) => {
@@ -182,10 +182,40 @@ class TradingCard {
                     }
                 });
                 let randomRarity = randomRarities.array()[Math.floor(Math.random() * randomRarities.array().length)];
-                database.query("SELECT * FROM tc_cards WHERE rarity = ?", [randomRarity.id], async(error, results) => {
-                    resolve(await TradingCard.init(results[Math.floor(Math.random() * results.length)].id));
-                })
+                resolve(randomRarity.id);
             });
+        });
+    }
+
+    /**
+     * This gives a random card, with chances in mind or a given rarity
+     * @param [rarity] Die Rarity der zu generierenden Karte
+     * @return {Promise<TradingCard>}
+     * @static
+     */
+    static async randomCard(rarity) {
+        return new Promise(async (resolve, reject) => {
+            let randomRarity = (rarity) ? rarity : (await TradingCard.genRarity());
+            database.query("SELECT * FROM tc_cards WHERE rarity = ?", [randomRarity], async(error, results) => {
+                let card = results[Math.floor(Math.random() * results.length)];
+                if(card.owners >= card.maxOwners && card.maxOwners != -1){
+                    let newCard = await TradingCard.randomCard();
+                    resolve(await TradingCard.init(newCard.id));
+                } else {
+                    resolve(await TradingCard.init(card.id));
+                }
+            })
+        });
+    }
+
+    /**
+     * Increase the Owner Value by one
+     * @param {TradingCard} card The trading card that should be increased.
+     * @static
+     */
+    static async increaseOwner(card) {
+        database.query("SELECT * from tc_cards WHERE id = ? LIMIT 1", [card.id], async(error, results) => {
+            database.query("UPDATE tc_cards SET owners = ? WHERE id = ?", [results[0].owners + 1, card.id], async(error, results) => {});
         });
     }
 
